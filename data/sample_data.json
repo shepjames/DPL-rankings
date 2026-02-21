@@ -1,0 +1,82 @@
+{
+  "_comment": "Sample/placeholder data for DPL 7th Grade Division 2 Boys Basketball.",
+  "_note": "Replace this with real data by running: python main.py  (fetches live from DPL website)",
+  "_note2": "Conferences and teams below are illustrative — actual DPL conference names may differ.",
+  "fetched_at": "2026-02-21T00:00:00",
+  "division": "7th Grade Division 2",
+  "gender": "Boys",
+  "conferences": {
+    "Conference A": [
+      {"team": "St. Rita",          "wins": 6, "losses": 1, "conference_wins": 5, "conference_losses": 1, "conference": "Conference A"},
+      {"team": "Good Shepherd",     "wins": 5, "losses": 2, "conference_wins": 4, "conference_losses": 2, "conference": "Conference A"},
+      {"team": "St. Thomas Aquinas","wins": 4, "losses": 3, "conference_wins": 3, "conference_losses": 3, "conference": "Conference A"},
+      {"team": "Christ the King",   "wins": 3, "losses": 4, "conference_wins": 2, "conference_losses": 4, "conference": "Conference A"},
+      {"team": "Holy Trinity",      "wins": 1, "losses": 6, "conference_wins": 1, "conference_losses": 5, "conference": "Conference A"}
+    ],
+    "Conference B": [
+      {"team": "St. Mark",          "wins": 6, "losses": 1, "conference_wins": 5, "conference_losses": 1, "conference": "Conference B"},
+      {"team": "Our Lady of Angels","wins": 5, "losses": 2, "conference_wins": 4, "conference_losses": 2, "conference": "Conference B"},
+      {"team": "St. Philip Neri",   "wins": 4, "losses": 3, "conference_wins": 3, "conference_losses": 3, "conference": "Conference B"},
+      {"team": "Incarnation",       "wins": 2, "losses": 5, "conference_wins": 2, "conference_losses": 4, "conference": "Conference B"},
+      {"team": "St. Bernard",       "wins": 0, "losses": 7, "conference_wins": 0, "conference_losses": 6, "conference": "Conference B"}
+    ],
+    "Conference C": [
+      {"team": "All Saints",        "wins": 5, "losses": 2, "conference_wins": 4, "conference_losses": 2, "conference": "Conference C"},
+      {"team": "St. Michael",       "wins": 5, "losses": 2, "conference_wins": 4, "conference_losses": 2, "conference": "Conference C"},
+      {"team": "Ursuline Academy",  "wins": 4, "losses": 3, "conference_wins": 3, "conference_losses": 3, "conference": "Conference C"},
+      {"team": "St. Joseph",        "wins": 3, "losses": 4, "conference_wins": 2, "conference_losses": 4, "conference": "Conference C"},
+      {"team": "Holy Cross",        "wins": 2, "losses": 5, "conference_wins": 1, "conference_losses": 5, "conference": "Conference C"}
+    ]
+  },
+  "games": [
+    {"date": "2026-01-10", "home_team": "St. Rita",           "away_team": "Holy Trinity",       "home_score": 45, "away_score": 22, "conference": "Conference A"},
+    {"date": "2026-01-10", "home_team": "Good Shepherd",      "away_team": "Christ the King",    "home_score": 38, "away_score": 31, "conference": "Conference A"},
+    {"date": "2026-01-10", "home_team": "St. Mark",           "away_team": "St. Bernard",        "home_score": 52, "away_score": 18, "conference": "Conference B"},
+    {"date": "2026-01-10", "home_team": "Our Lady of Angels", "away_team": "Incarnation",        "home_score": 41, "away_score": 35, "conference": "Conference B"},
+    {"date": "2026-01-10", "home_team": "All Saints",         "away_team": "Holy Cross",         "home_score": 36, "away_score": 28, "conference": "Conference C"},
+    {"date": "2026-01-10", "home_team": "St. Michael",        "away_team": "St. Joseph",         "home_score": 44, "away_score": 30, "conference": "Conference C"},
+
+    {"date": "2026-01-17", "home_team": "St. Rita",           "away_team": "Christ the King",   "home_score": 40, "away_score": 33, "conference": "Conference A"},
+    {"date": "2026-01-17", "home_team": "Good Shepherd",      "away_team": "Holy Trinity",       "home_score": 35, "away_score": 20, "conference": "Conference A"},
+    {"date": "2026-01-17", "home_team": "St. Thomas Aquinas", "away_team": "St. Rita",           "home_score": 37, "away_score": 41, "conference": "Conference A"},
+    {"date": "2026-01-17", "home_team": "St. Mark",           "away_team": "Incarnation",        "home_score": 48, "away_score": 25, "conference": "Conference B"},
+    {"date": "2026-01-17", "home_team": "Our Lady of Angels", "away_team": "St. Bernard",        "home_score": 39, "away_score": 22, "conference": "Conference B"},
+    {"date": "2026-01-17", "home_team": "All Saints",         "away_team": "St. Joseph",         "home_score": 42, "away_score": 38, "conference": "Conference C"},
+    {"date": "2026-01-17", "home_team": "St. Michael",        "away_team": "Ursuline Academy",   "home_score": 33, "away_score": 29, "conference": "Conference C"},
+
+    {"date": "2026-01-24", "home_team": "St. Rita",           "away_team": "Good Shepherd",      "home_score": 43, "away_score": 39, "conference": "Conference A"},
+    {"date": "2026-01-24", "home_team": "Christ the King",    "away_team": "St. Thomas Aquinas", "home_score": 35, "away_score": 32, "conference": "Conference A"},
+    {"date": "2026-01-24", "home_team": "St. Philip Neri",    "away_team": "St. Mark",           "home_score": 30, "away_score": 44, "conference": "Conference B"},
+    {"date": "2026-01-24", "home_team": "Incarnation",        "away_team": "St. Bernard",        "home_score": 38, "away_score": 27, "conference": "Conference B"},
+    {"date": "2026-01-24", "home_team": "Ursuline Academy",   "away_team": "All Saints",         "home_score": 40, "away_score": 36, "conference": "Conference C"},
+    {"date": "2026-01-24", "home_team": "St. Joseph",         "away_team": "Holy Cross",         "home_score": 33, "away_score": 28, "conference": "Conference C"},
+
+    {"date": "2026-01-31", "home_team": "St. Rita",           "away_team": "St. Thomas Aquinas", "home_score": 38, "away_score": 34, "conference": "Conference A"},
+    {"date": "2026-01-31", "home_team": "Good Shepherd",      "away_team": "Christ the King",    "home_score": 36, "away_score": 30, "conference": "Conference A"},
+    {"date": "2026-01-31", "home_team": "Our Lady of Angels", "away_team": "St. Philip Neri",    "home_score": 44, "away_score": 37, "conference": "Conference B"},
+    {"date": "2026-01-31", "home_team": "St. Mark",           "away_team": "St. Philip Neri",    "home_score": 50, "away_score": 32, "conference": "Conference B"},
+    {"date": "2026-01-31", "home_team": "All Saints",         "away_team": "Ursuline Academy",   "home_score": 35, "away_score": 37, "conference": "Conference C"},
+    {"date": "2026-01-31", "home_team": "St. Michael",        "away_team": "Holy Cross",         "home_score": 46, "away_score": 24, "conference": "Conference C"},
+
+    {"date": "2026-02-07", "home_team": "Holy Trinity",       "away_team": "St. Thomas Aquinas", "home_score": 28, "away_score": 39, "conference": "Conference A"},
+    {"date": "2026-02-07", "home_team": "Good Shepherd",      "away_team": "St. Rita",           "home_score": 31, "away_score": 35, "conference": "Conference A"},
+    {"date": "2026-02-07", "home_team": "St. Bernard",        "away_team": "St. Philip Neri",    "home_score": 20, "away_score": 41, "conference": "Conference B"},
+    {"date": "2026-02-07", "home_team": "St. Mark",           "away_team": "Our Lady of Angels", "home_score": 47, "away_score": 40, "conference": "Conference B"},
+    {"date": "2026-02-07", "home_team": "Holy Cross",         "away_team": "Ursuline Academy",   "home_score": 22, "away_score": 38, "conference": "Conference C"},
+    {"date": "2026-02-07", "home_team": "St. Joseph",         "away_team": "St. Michael",        "home_score": 30, "away_score": 42, "conference": "Conference C"},
+
+    {"date": "2026-02-14", "home_team": "St. Thomas Aquinas", "away_team": "Good Shepherd",      "home_score": 40, "away_score": 35, "conference": "Conference A"},
+    {"date": "2026-02-14", "home_team": "Christ the King",    "away_team": "Holy Trinity",       "home_score": 44, "away_score": 26, "conference": "Conference A"},
+    {"date": "2026-02-14", "home_team": "St. Philip Neri",    "away_team": "Incarnation",        "home_score": 45, "away_score": 30, "conference": "Conference B"},
+    {"date": "2026-02-14", "home_team": "Our Lady of Angels", "away_team": "St. Bernard",        "home_score": 40, "away_score": 19, "conference": "Conference B"},
+    {"date": "2026-02-14", "home_team": "Ursuline Academy",   "away_team": "St. Joseph",         "home_score": 36, "away_score": 32, "conference": "Conference C"},
+    {"date": "2026-02-14", "home_team": "All Saints",         "away_team": "Holy Cross",         "home_score": 38, "away_score": 25, "conference": "Conference C"},
+
+    {"date": "2026-02-21", "home_team": "St. Rita",           "away_team": "Holy Trinity",       "home_score": 47, "away_score": 30, "conference": "Conference A"},
+    {"date": "2026-02-21", "home_team": "St. Thomas Aquinas", "away_team": "Christ the King",    "home_score": 38, "away_score": 36, "conference": "Conference A"},
+    {"date": "2026-02-21", "home_team": "St. Mark",           "away_team": "Incarnation",        "home_score": 51, "away_score": 27, "conference": "Conference B"},
+    {"date": "2026-02-21", "home_team": "St. Philip Neri",    "away_team": "St. Bernard",        "home_score": 44, "away_score": 18, "conference": "Conference B"},
+    {"date": "2026-02-21", "home_team": "St. Michael",        "away_team": "All Saints",         "home_score": 40, "away_score": 38, "conference": "Conference C"},
+    {"date": "2026-02-21", "home_team": "Holy Cross",         "away_team": "St. Joseph",         "home_score": 27, "away_score": 33, "conference": "Conference C"}
+  ]
+}
