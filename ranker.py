@@ -1,6 +1,6 @@
 """
 DPL Basketball Ranking Engine
-Ranks 7th Grade Division 2 Boys teams across all conferences.
+Ranks 5th Grade Girls teams across all conferences.
 
 Ranking criteria (applied in order as tiebreakers):
   1. Overall win percentage  (primary)
@@ -221,7 +221,7 @@ def _resolve_ties(tied: list[Team]) -> list[Team]:
 
 def rank_teams(data: dict) -> list[tuple[int, Team]]:
     """
-    Rank all 7GD2 teams across all conferences.
+    Rank all 5th Grade Girls teams across all conferences.
 
     Returns a list of (rank, Team) tuples in ranked order.
     Ties at the same rank share the same rank number.
@@ -269,18 +269,26 @@ def rank_teams(data: dict) -> list[tuple[int, Team]]:
 # ---------------------------------------------------------------------------
 
 
-def format_rankings(ranked: list[tuple[int, Team]], show_h2h: bool = False) -> str:
+def format_rankings(
+    ranked: list[tuple[int, Team]],
+    show_h2h: bool = False,
+    division: str = "5th Grade",
+    gender: str = "Girls",
+) -> str:
     """Produce a formatted string of the rankings table."""
     if not ranked:
         return "No teams found. Check your data source."
 
+    title = f"DPL {division} {gender} Basketball — Cross-Conference Rankings"
+    width = max(78, len(title) + 4)
+
     lines = [
         "",
-        "=" * 78,
-        "  DPL 7th Grade Division 2 Boys Basketball — Cross-Conference Rankings",
-        "=" * 78,
+        "=" * width,
+        f"  {title}",
+        "=" * width,
         f"  {'Rank':<6} {'Team':<28} {'Conf':<20} {'W-L':>5} {'Conf W-L':>9} {'Diff/G':>7}",
-        "-" * 78,
+        "-" * width,
     ]
 
     for rank, team in ranked:
@@ -291,20 +299,20 @@ def format_rankings(ranked: list[tuple[int, Team]], show_h2h: bool = False) -> s
             f"  {rank:<6} {team.name:<28} {team.conference:<20} {wl:>5} {conf_wl:>9} {diff:>7}"
         )
 
-    lines.append("=" * 78)
+    lines.append("=" * width)
     lines.append("")
     lines.append("  Ranking criteria (in order):")
     lines.append("    1. Overall win percentage")
     lines.append("    2. Conference win percentage")
     lines.append("    3. Head-to-head win % (among tied teams)")
     lines.append("    4. Head-to-head score differential (among tied teams)")
-    lines.append(f"   5. Overall score differential (capped at ±{MAX_DIFF_PER_GAME} pts/game)")
+    lines.append(f"    5. Overall score differential (capped at ±{MAX_DIFF_PER_GAME} pts/game)")
     lines.append("")
 
     if show_h2h:
-        lines.append("-" * 78)
+        lines.append("-" * width)
         lines.append("  Head-to-Head Summary")
-        lines.append("-" * 78)
+        lines.append("-" * width)
         for _, team in ranked:
             if team.h2h:
                 lines.append(f"  {team.name}:")

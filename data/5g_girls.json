@@ -1,0 +1,110 @@
+{
+  "_source": "Season schedule and scores — 5th Grade Girls 2026 (manually entered from DPL schedule)",
+  "_note": "Standings reflect all completed games through Feb 15. Upcoming games (Feb 21+) have null scores.",
+  "_note2": "Jan 10 games have no conference label and are treated as non-conference (overall W/L only). Jan 17+ games are labeled East or West.",
+  "_note3": "Games with W/L only (no score) use null scores — they count in standings but are skipped for score differential and H2H tracking.",
+  "fetched_at": "2026-02-21T00:00:00",
+  "division": "5th Grade",
+  "gender": "Girls",
+  "conferences": {
+    "East": [
+      {"team": "St. Rita Green",      "wins": 5, "losses": 0, "conference_wins": 4, "conference_losses": 0, "conference": "East"},
+      {"team": "STA 5th Silver",      "wins": 5, "losses": 1, "conference_wins": 4, "conference_losses": 1, "conference": "East"},
+      {"team": "STA 5th Blue",        "wins": 5, "losses": 2, "conference_wins": 5, "conference_losses": 1, "conference": "East"},
+      {"team": "St. Monica Blue",     "wins": 3, "losses": 3, "conference_wins": 3, "conference_losses": 2, "conference": "East"},
+      {"team": "POP POP White",       "wins": 2, "losses": 3, "conference_wins": 2, "conference_losses": 2, "conference": "East"},
+      {"team": "St. Patrick",         "wins": 1, "losses": 5, "conference_wins": 1, "conference_losses": 4, "conference": "East"},
+      {"team": "CKS Red",             "wins": 0, "losses": 5, "conference_wins": 0, "conference_losses": 4, "conference": "East"},
+      {"team": "St. Paul Saint Paul", "wins": 0, "losses": 6, "conference_wins": 0, "conference_losses": 5, "conference": "East"}
+    ],
+    "West": [
+      {"team": "St. Rita White",      "wins": 6, "losses": 0, "conference_wins": 5, "conference_losses": 0, "conference": "West"},
+      {"team": "STA 5th White",       "wins": 6, "losses": 0, "conference_wins": 5, "conference_losses": 0, "conference": "West"},
+      {"team": "All Saints Eagles",   "wins": 4, "losses": 1, "conference_wins": 3, "conference_losses": 1, "conference": "West"},
+      {"team": "MIS",                 "wins": 3, "losses": 2, "conference_wins": 2, "conference_losses": 2, "conference": "West"},
+      {"team": "CKS Gold",            "wins": 2, "losses": 3, "conference_wins": 2, "conference_losses": 2, "conference": "West"},
+      {"team": "St. Mark",            "wins": 2, "losses": 3, "conference_wins": 1, "conference_losses": 3, "conference": "West"},
+      {"team": "St. Monica White",    "wins": 1, "losses": 5, "conference_wins": 0, "conference_losses": 5, "conference": "West"},
+      {"team": "POP POP Blue",        "wins": 0, "losses": 5, "conference_wins": 0, "conference_losses": 4, "conference": "West"}
+    ]
+  },
+  "games": [
+    {"date": "2026-01-10", "home_team": "STA 5th Blue",        "away_team": "St. Rita White",      "home_score": 15,   "away_score": 28,   "conference": null,   "_note": "Non-conference"},
+    {"date": "2026-01-10", "home_team": "All Saints Eagles",   "away_team": "St. Monica Blue",     "home_score": 17,   "away_score": 12,   "conference": null,   "_note": "Non-conference"},
+    {"date": "2026-01-10", "home_team": "STA 5th White",       "away_team": "POP POP White",       "home_score": 26,   "away_score": 16,   "conference": null,   "_note": "Non-conference"},
+    {"date": "2026-01-10", "home_team": "St. Rita Green",      "away_team": "POP POP Blue",        "home_score": 39,   "away_score": 6,    "conference": null,   "_note": "Non-conference"},
+    {"date": "2026-01-10", "home_team": "MIS",                 "away_team": "CKS Red",             "home_score": 6,    "away_score": 4,    "conference": null,   "_note": "Non-conference"},
+    {"date": "2026-01-10", "home_team": "STA 5th Silver",      "away_team": "CKS Gold",            "home_score": 22,   "away_score": 0,    "conference": null,   "_note": "Non-conference"},
+    {"date": "2026-01-10", "home_team": "St. Monica White",    "away_team": "St. Paul Saint Paul", "home_score": 11,   "away_score": 8,    "conference": null,   "_note": "Non-conference"},
+    {"date": "2026-01-10", "home_team": "St. Patrick",         "away_team": "St. Mark",            "home_score": 8,    "away_score": 12,   "conference": null,   "_note": "Non-conference"},
+
+    {"date": "2026-01-17", "home_team": "POP POP White",       "away_team": "STA 5th Blue",        "home_score": 10,   "away_score": 17,   "conference": "East"},
+    {"date": "2026-01-17", "home_team": "St. Monica Blue",     "away_team": "STA 5th Silver",      "home_score": 13,   "away_score": 18,   "conference": "East"},
+    {"date": "2026-01-17", "home_team": "CKS Red",             "away_team": "St. Rita Green",      "home_score": null, "away_score": null, "conference": "East",  "_note": "W/L only: St. Rita Green won"},
+    {"date": "2026-01-17", "home_team": "POP POP Blue",        "away_team": "STA 5th White",       "home_score": 10,   "away_score": 32,   "conference": "West"},
+    {"date": "2026-01-17", "home_team": "St. Mark",            "away_team": "St. Monica White",    "home_score": 15,   "away_score": 7,    "conference": "West"},
+    {"date": "2026-01-17", "home_team": "St. Rita White",      "away_team": "MIS",                 "home_score": 33,   "away_score": 4,    "conference": "West"},
+    {"date": "2026-01-17", "home_team": "CKS Gold",            "away_team": "All Saints Eagles",   "home_score": 5,    "away_score": 0,    "conference": "West"},
+
+    {"date": "2026-01-18", "home_team": "POP POP White",       "away_team": "St. Paul Saint Paul", "home_score": 22,   "away_score": 8,    "conference": "East"},
+
+    {"date": "2026-01-31", "home_team": "St. Monica White",    "away_team": "STA 5th White",       "home_score": 12,   "away_score": 16,   "conference": "West"},
+    {"date": "2026-01-31", "home_team": "St. Paul Saint Paul", "away_team": "St. Monica Blue",     "home_score": 10,   "away_score": 22,   "conference": "East"},
+    {"date": "2026-01-31", "home_team": "St. Rita Green",      "away_team": "STA 5th Silver",      "home_score": 31,   "away_score": 4,    "conference": "East"},
+    {"date": "2026-01-31", "home_team": "All Saints Eagles",   "away_team": "St. Rita White",      "home_score": 10,   "away_score": 26,   "conference": "West"},
+    {"date": "2026-01-31", "home_team": "St. Patrick",         "away_team": "STA 5th Blue",        "home_score": 2,    "away_score": 33,   "conference": "East"},
+    {"date": "2026-01-31", "home_team": "CKS Gold",            "away_team": "POP POP Blue",        "home_score": 10,   "away_score": 5,    "conference": "West"},
+
+    {"date": "2026-02-01", "home_team": "STA 5th Silver",      "away_team": "CKS Red",             "home_score": 30,   "away_score": 2,    "conference": "East"},
+
+    {"date": "2026-02-04", "home_team": "STA 5th Silver",      "away_team": "STA 5th Blue",        "home_score": 17,   "away_score": 10,   "conference": "East"},
+
+    {"date": "2026-02-07", "home_team": "St. Mark",            "away_team": "All Saints Eagles",   "home_score": 5,    "away_score": 27,   "conference": "West"},
+    {"date": "2026-02-07", "home_team": "St. Rita White",      "away_team": "POP POP Blue",        "home_score": 18,   "away_score": 1,    "conference": "West"},
+    {"date": "2026-02-07", "home_team": "St. Patrick",         "away_team": "POP POP White",       "home_score": 8,    "away_score": 12,   "conference": "East"},
+    {"date": "2026-02-07", "home_team": "STA 5th Blue",        "away_team": "St. Paul Saint Paul", "home_score": 34,   "away_score": 7,    "conference": "East"},
+    {"date": "2026-02-07", "home_team": "MIS",                 "away_team": "St. Monica White",    "home_score": 14,   "away_score": 10,   "conference": "West"},
+    {"date": "2026-02-07", "home_team": "CKS Red",             "away_team": "St. Monica Blue",     "home_score": 0,    "away_score": 32,   "conference": "East"},
+    {"date": "2026-02-07", "home_team": "STA 5th White",       "away_team": "CKS Gold",            "home_score": 7,    "away_score": 6,    "conference": "West"},
+
+    {"date": "2026-02-08", "home_team": "St. Monica Blue",     "away_team": "St. Patrick",         "home_score": 26,   "away_score": 0,    "conference": "East"},
+    {"date": "2026-02-08", "home_team": "St. Paul Saint Paul", "away_team": "St. Rita Green",      "home_score": 2,    "away_score": 39,   "conference": "East"},
+    {"date": "2026-02-08", "home_team": "St. Monica White",    "away_team": "All Saints Eagles",   "home_score": 7,    "away_score": 13,   "conference": "West"},
+
+    {"date": "2026-02-14", "home_team": "STA 5th Blue",        "away_team": "St. Monica Blue",     "home_score": 13,   "away_score": 8,    "conference": "East"},
+    {"date": "2026-02-14", "home_team": "St. Paul Saint Paul", "away_team": "St. Patrick",         "home_score": null, "away_score": null, "conference": "East",  "_note": "W/L only: St. Patrick won"},
+    {"date": "2026-02-14", "home_team": "POP POP White",       "away_team": "STA 5th Silver",      "home_score": 9,    "away_score": 26,   "conference": "East"},
+    {"date": "2026-02-14", "home_team": "MIS",                 "away_team": "CKS Gold",            "home_score": 12,   "away_score": 6,    "conference": "West"},
+    {"date": "2026-02-14", "home_team": "STA 5th White",       "away_team": "St. Mark",            "home_score": 28,   "away_score": 7,    "conference": "West"},
+    {"date": "2026-02-14", "home_team": "All Saints Eagles",   "away_team": "POP POP Blue",        "home_score": 15,   "away_score": 9,    "conference": "West"},
+    {"date": "2026-02-14", "home_team": "St. Monica White",    "away_team": "St. Rita White",      "home_score": 2,    "away_score": 15,   "conference": "West"},
+
+    {"date": "2026-02-15", "home_team": "STA 5th White",       "away_team": "MIS",                 "home_score": 22,   "away_score": 14,   "conference": "West"},
+    {"date": "2026-02-15", "home_team": "STA 5th Blue",        "away_team": "CKS Red",             "home_score": null, "away_score": null, "conference": "East",  "_note": "W/L only: STA 5th Blue won"},
+    {"date": "2026-02-15", "home_team": "St. Rita Green",      "away_team": "St. Patrick",         "home_score": 46,   "away_score": 1,    "conference": "East"},
+    {"date": "2026-02-15", "home_team": "St. Mark",            "away_team": "St. Rita White",      "home_score": 8,    "away_score": 38,   "conference": "West"},
+
+    {"date": "2026-02-21", "home_team": "All Saints Eagles",   "away_team": "MIS",                 "home_score": null, "away_score": null, "conference": "West",  "_note": "Upcoming"},
+    {"date": "2026-02-21", "home_team": "St. Monica Blue",     "away_team": "St. Rita Green",      "home_score": null, "away_score": null, "conference": "East",  "_note": "Upcoming"},
+    {"date": "2026-02-21", "home_team": "CKS Gold",            "away_team": "St. Monica White",    "home_score": null, "away_score": null, "conference": "West",  "_note": "Upcoming"},
+    {"date": "2026-02-21", "home_team": "POP POP Blue",        "away_team": "St. Mark",            "home_score": null, "away_score": null, "conference": "West",  "_note": "Upcoming"},
+    {"date": "2026-02-21", "home_team": "POP POP White",       "away_team": "CKS Red",             "home_score": null, "away_score": null, "conference": "East",  "_note": "Upcoming"},
+
+    {"date": "2026-02-22", "home_team": "CKS Red",             "away_team": "St. Paul Saint Paul", "home_score": null, "away_score": null, "conference": "East",  "_note": "Upcoming"},
+    {"date": "2026-02-22", "home_team": "St. Patrick",         "away_team": "STA 5th Silver",      "home_score": null, "away_score": null, "conference": "East",  "_note": "Upcoming"},
+    {"date": "2026-02-22", "home_team": "MIS",                 "away_team": "St. Mark",            "home_score": null, "away_score": null, "conference": "West",  "_note": "Upcoming"},
+
+    {"date": "2026-02-28", "home_team": "St. Monica Blue",     "away_team": "POP POP White",       "home_score": null, "away_score": null, "conference": "East",  "_note": "Upcoming"},
+    {"date": "2026-02-28", "home_team": "CKS Gold",            "away_team": "St. Rita White",      "home_score": null, "away_score": null, "conference": "West",  "_note": "Upcoming"},
+    {"date": "2026-02-28", "home_team": "St. Patrick",         "away_team": "CKS Red",             "home_score": null, "away_score": null, "conference": "East",  "_note": "Upcoming"},
+    {"date": "2026-02-28", "home_team": "St. Monica White",    "away_team": "POP POP Blue",        "home_score": null, "away_score": null, "conference": "West",  "_note": "Upcoming"},
+    {"date": "2026-02-28", "home_team": "St. Rita Green",      "away_team": "STA 5th Blue",        "home_score": null, "away_score": null, "conference": "East",  "_note": "Upcoming"},
+    {"date": "2026-02-28", "home_team": "All Saints Eagles",   "away_team": "STA 5th White",       "home_score": null, "away_score": null, "conference": "West",  "_note": "Upcoming"},
+
+    {"date": "2026-03-01", "home_team": "St. Rita Green",      "away_team": "POP POP White",       "home_score": null, "away_score": null, "conference": "East",  "_note": "Upcoming"},
+    {"date": "2026-03-01", "home_team": "St. Rita White",      "away_team": "STA 5th White",       "home_score": null, "away_score": null, "conference": "West",  "_note": "Key matchup — both 5-0 in conference"},
+    {"date": "2026-03-01", "home_team": "STA 5th Silver",      "away_team": "St. Paul Saint Paul", "home_score": null, "away_score": null, "conference": "East",  "_note": "Upcoming"},
+    {"date": "2026-03-01", "home_team": "POP POP Blue",        "away_team": "MIS",                 "home_score": null, "away_score": null, "conference": "West",  "_note": "Upcoming"},
+    {"date": "2026-03-01", "home_team": "St. Mark",            "away_team": "CKS Gold",            "home_score": null, "away_score": null, "conference": "West",  "_note": "Upcoming"}
+  ]
+}

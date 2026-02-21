@@ -1,6 +1,6 @@
 """
 DPL Basketball Data Scraper
-Fetches standings and game results for 7th Grade Division 2 Boys from the
+Fetches standings and game results for 5th Grade Girls from the
 Dallas Parochial League website (https://www.dallasparochialleague.com).
 
 The DPL site renders content dynamically via JavaScript (Squarespace/Doodlio).
@@ -26,8 +26,8 @@ from datetime import datetime
 STANDINGS_URL = "https://www.dallasparochialleague.com/basketball-standings"
 SCHEDULE_URL = "https://www.dallasparochialleague.com/basketball-schedule-results"
 
-TARGET_DIVISION = "7th Grade Division 2"       # adjust if label differs on site
-TARGET_GENDER = "Boys"
+TARGET_DIVISION = "5th Grade"                  # adjust if label differs on site
+TARGET_GENDER = "Girls"
 DATA_DIR = Path(__file__).parent / "data"
 CACHE_FILE = DATA_DIR / "dpl_data.json"
 
@@ -320,6 +320,7 @@ def fetch_dpl_data() -> dict:
         "gender": TARGET_GENDER,
         "conferences": conferences,
         "games": games,
+        "_note": "DPL site uses JavaScript rendering (Doodlio). If conferences is empty, use --use-cache with a manually built JSON file.",
     }
 
 
@@ -355,7 +356,8 @@ def main():
 
     data = load_or_fetch(use_cache=args.use_cache)
 
-    print(f"\nConferences found: {list(data['conferences'].keys())}")
+    print(f"\nDivision: {data.get('division', 'Unknown')} {data.get('gender', '')}")
+    print(f"Conferences found: {list(data['conferences'].keys())}")
     total_teams = sum(len(v) for v in data["conferences"].values())
     print(f"Total teams: {total_teams}")
     print(f"Games recorded: {len(data['games'])}")

@@ -3,13 +3,14 @@
 DPL Basketball Rankings — Main Entry Point
 
 Fetches (or loads cached) data from the Dallas Parochial League website
-and prints cross-conference rankings for 7th Grade Division 2 Boys.
+and prints cross-conference rankings for 5th Grade Girls.
 
 Usage:
-    python main.py                  # Fetch live data, print rankings
-    python main.py --use-cache      # Use cached data (no network)
-    python main.py --h2h            # Include head-to-head detail
-    python main.py --load sample    # Load the bundled sample data
+    python main.py                        # Fetch live data, print rankings
+    python main.py --use-cache            # Use cached data (no network)
+    python main.py --h2h                  # Include head-to-head detail
+    python main.py --load sample          # Load the bundled sample data
+    python main.py --load data/5g_girls.json  # Load real 5G Girls season data
 """
 
 import argparse
@@ -25,7 +26,7 @@ SAMPLE_FILE = Path(__file__).parent / "data" / "sample_data.json"
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Rank DPL 7th Grade Division 2 Boys basketball teams"
+        description="Rank DPL 5th Grade Girls basketball teams"
     )
     parser.add_argument(
         "--use-cache",
@@ -74,7 +75,12 @@ def main():
     # Rank and display
     # ------------------------------------------------------------------ #
     ranked = rank_teams(data)
-    print(format_rankings(ranked, show_h2h=args.h2h))
+    print(format_rankings(
+        ranked,
+        show_h2h=args.h2h,
+        division=data.get("division", "5th Grade"),
+        gender=data.get("gender", "Girls"),
+    ))
 
     if not ranked:
         sys.exit(1)
