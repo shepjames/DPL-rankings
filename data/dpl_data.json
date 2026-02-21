@@ -1,6 +1,6 @@
 {
-  "_source": "Manually entered from DPL website standings — 7th Grade Division 2 Boys Basketball",
-  "_note": "Game scores not available; score-differential tiebreaker will show n/a. Head-to-head tiebreaker requires game results to be entered in the 'games' array.",
+  "_source": "Manually entered standings + game scores from league schedule (Google Drive)",
+  "_note": "Standings reflect all games marked Final through early March. Game scores populated from schedule; games with W/L-only (no scores) are included with null scores and are skipped by the ranker for score-differential purposes.",
   "fetched_at": "2026-02-21T00:00:00",
   "division": "7th Grade Division 2",
   "gender": "Boys",
@@ -29,5 +29,81 @@
       {"team": "St. Cecilia Bulldogs",      "wins": 0, "losses": 8, "conference_wins": 0, "conference_losses": 8, "conference": "Conference B"}
     ]
   },
-  "games": []
+  "games": [
+    {"date": "2026-01-10", "home_team": "St. Monica Blue",           "away_team": "St. Philip-St. Augustine", "home_score": 22, "away_score": 29, "conference": "Conference A"},
+    {"date": "2026-01-10", "home_team": "CKS Gold",                  "away_team": "All Saints Eagles",        "home_score": 39, "away_score": 20, "conference": "Conference A"},
+    {"date": "2026-01-10", "home_team": "POP POP White",             "away_team": "St. Monica White",         "home_score": 14, "away_score": 41, "conference": "Conference A"},
+    {"date": "2026-01-10", "home_team": "St. Mark",                  "away_team": "Highlands",                "home_score": 15, "away_score": 29, "conference": "Conference A"},
+    {"date": "2026-01-10", "home_team": "St. Rita Green",            "away_team": "St. Rita Black",           "home_score": 23, "away_score": 29, "conference": "Conference B"},
+    {"date": "2026-01-10", "home_team": "St. Patrick",               "away_team": "CKS Red",                  "home_score": 32, "away_score": 19, "conference": "Conference B"},
+    {"date": "2026-01-10", "home_team": "POP POP Blue",              "away_team": "STA D2 Silver",            "home_score": 27, "away_score": 26, "conference": "Conference B"},
+
+    {"date": "2026-01-11", "home_team": "St. Philip-St. Augustine",  "away_team": "All Saints Eagles",        "home_score": 29, "away_score": 4,  "conference": "Conference A"},
+    {"date": "2026-01-11", "home_team": "CKS Gold",                  "away_team": "St. Mark",                 "home_score": 24, "away_score": 11, "conference": "Conference A"},
+    {"date": "2026-01-11", "home_team": "St. Rita White",            "away_team": "Highlands",                "home_score": 42, "away_score": 16, "conference": "Conference A"},
+    {"date": "2026-01-11", "home_team": "STA D2 Silver",             "away_team": "St. Monica Carolina",     "home_score": 22, "away_score": 19, "conference": "Conference B"},
+    {"date": "2026-01-11", "home_team": "St. Patrick",               "away_team": "MIS",                      "home_score": 40, "away_score": 32, "conference": "Conference B"},
+    {"date": "2026-01-11", "home_team": "St. Rita Green",            "away_team": "St. Cecilia Bulldogs",     "home_score": 54, "away_score": 28, "conference": "Conference B"},
+
+    {"date": "2026-01-17", "home_team": "POP POP White",             "away_team": "St. Philip-St. Augustine", "home_score": 10, "away_score": 30, "conference": "Conference A"},
+    {"date": "2026-01-17", "home_team": "St. Monica Blue",           "away_team": "St. Monica White",         "home_score": 25, "away_score": 22, "conference": "Conference A"},
+    {"date": "2026-01-17", "home_team": "St. Mark",                  "away_team": "STA D2 Blue",              "home_score": 27, "away_score": 48, "conference": "Conference A"},
+    {"date": "2026-01-17", "home_team": "POP POP Blue",              "away_team": "St. Rita Green",           "home_score": 23, "away_score": 48, "conference": "Conference B"},
+    {"date": "2026-01-17", "home_team": "CKS Red",                   "away_team": "St. Monica Carolina",     "home_score": 17, "away_score": 28, "conference": "Conference B"},
+
+    {"date": "2026-01-18", "home_team": "Highlands",                 "away_team": "POP POP White",            "home_score": 27, "away_score": 16, "conference": "Conference A"},
+    {"date": "2026-01-18", "home_team": "St. Philip-St. Augustine",  "away_team": "St. Rita White",           "home_score": 23, "away_score": 15, "conference": "Conference A"},
+    {"date": "2026-01-18", "home_team": "CKS Gold",                  "away_team": "St. Monica White",         "home_score": 12, "away_score": 22, "conference": "Conference A"},
+    {"date": "2026-01-18", "home_team": "MIS",                       "away_team": "CKS Red",                  "home_score": 40, "away_score": 21, "conference": "Conference B"},
+
+    {"date": "2026-01-31", "home_team": "STA D2 Blue",               "away_team": "St. Philip-St. Augustine", "home_score": 28, "away_score": 22, "conference": "Conference A"},
+    {"date": "2026-01-31", "home_team": "St. Rita White",            "away_team": "All Saints Eagles",        "home_score": 40, "away_score": 7,  "conference": "Conference A"},
+    {"date": "2026-01-31", "home_team": "St. Monica White",          "away_team": "St. Mark",                 "home_score": 41, "away_score": 22, "conference": "Conference A"},
+    {"date": "2026-01-31", "home_team": "Highlands",                 "away_team": "CKS Gold",                 "home_score": 26, "away_score": 25, "conference": "Conference A"},
+    {"date": "2026-01-31", "home_team": "St. Monica Blue",           "away_team": "POP POP White",            "home_score": 21, "away_score": 15, "conference": "Conference A"},
+    {"date": "2026-01-31", "home_team": "POP POP Blue",              "away_team": "St. Patrick",              "home_score": 20, "away_score": 32, "conference": "Conference B"},
+    {"date": "2026-01-31", "home_team": "STA D2 Silver",             "away_team": "St. Rita Green",           "home_score": 25, "away_score": 41, "conference": "Conference B"},
+
+    {"date": "2026-02-01", "home_team": "St. Monica White",          "away_team": "St. Philip-St. Augustine", "home_score": 26, "away_score": 34, "conference": "Conference A"},
+    {"date": "2026-02-01", "home_team": "St. Mark",                  "away_team": "All Saints Eagles",        "home_score": 33, "away_score": 15, "conference": "Conference A"},
+    {"date": "2026-02-01", "home_team": "St. Cecilia Bulldogs",      "away_team": "St. Rita Black",           "home_score": 12, "away_score": 28, "conference": "Conference B"},
+    {"date": "2026-02-01", "home_team": "St. Monica Carolina",       "away_team": "St. Patrick",              "home_score": 32, "away_score": 34, "conference": "Conference B"},
+
+    {"date": "2026-02-04", "home_team": "St. Cecilia Bulldogs",      "away_team": "MIS",                      "home_score": 19, "away_score": 37, "conference": "Conference B"},
+
+    {"date": "2026-02-07", "home_team": "POP POP White",             "away_team": "St. Mark",                 "home_score": 12, "away_score": 42, "conference": "Conference A"},
+    {"date": "2026-02-07", "home_team": "All Saints Eagles",         "away_team": "Highlands",                "home_score": 12, "away_score": 40, "conference": "Conference A"},
+    {"date": "2026-02-07", "home_team": "STA D2 Blue",               "away_team": "CKS Gold",                 "home_score": 23, "away_score": 24, "conference": "Conference A"},
+    {"date": "2026-02-07", "home_team": "MIS",                       "away_team": "St. Rita Green",           "home_score": 32, "away_score": 39, "conference": "Conference B"},
+    {"date": "2026-02-07", "home_team": "CKS Red",                   "away_team": "POP POP Blue",             "home_score": 26, "away_score": 28, "conference": "Conference B"},
+    {"date": "2026-02-07", "home_team": "STA D2 Silver",             "away_team": "St. Cecilia Bulldogs",     "home_score": 31, "away_score": 17, "conference": "Conference B"},
+
+    {"date": "2026-02-08", "home_team": "St. Rita Black",            "away_team": "MIS",                      "home_score": 29, "away_score": 16, "conference": "Conference B"},
+    {"date": "2026-02-08", "home_team": "St. Patrick",               "away_team": "St. Rita Green",           "home_score": 39, "away_score": 22, "conference": "Conference B"},
+    {"date": "2026-02-08", "home_team": "St. Monica Carolina",       "away_team": "POP POP Blue",             "home_score": 23, "away_score": 21, "conference": "Conference B"},
+    {"date": "2026-02-08", "home_team": "St. Monica White",          "away_team": "All Saints Eagles",        "home_score": 40, "away_score": 7,  "conference": "Conference A"},
+    {"date": "2026-02-08", "home_team": "St. Rita White",            "away_team": "St. Monica Blue",          "home_score": 27, "away_score": 19, "conference": "Conference A"},
+
+    {"date": "2026-02-14", "home_team": "All Saints Eagles",         "away_team": "POP POP White",            "home_score": 20, "away_score": 34, "conference": "Conference A"},
+    {"date": "2026-02-14", "home_team": "Highlands",                 "away_team": "St. Monica Blue",          "home_score": 30, "away_score": 40, "conference": "Conference A"},
+    {"date": "2026-02-14", "home_team": "St. Rita White",            "away_team": "St. Mark",                 "home_score": 45, "away_score": 22, "conference": "Conference A"},
+    {"date": "2026-02-14", "home_team": "STA D2 Blue",               "away_team": "St. Monica White",         "home_score": 35, "away_score": 26, "conference": "Conference A"},
+    {"date": "2026-02-14", "home_team": "St. Rita Black",            "away_team": "St. Patrick",              "home_score": 35, "away_score": 38, "conference": "Conference B"},
+    {"date": "2026-02-14", "home_team": "MIS",                       "away_team": "STA D2 Silver",            "home_score": 34, "away_score": 31, "conference": "Conference B"},
+    {"date": "2026-02-14", "home_team": "St. Rita Green",            "away_team": "CKS Red",                  "home_score": 32, "away_score": 24, "conference": "Conference B"},
+
+    {"date": "2026-02-15", "home_team": "CKS Red",                   "away_team": "St. Rita Black",           "home_score": 18, "away_score": 25, "conference": "Conference B"},
+    {"date": "2026-02-15", "home_team": "St. Cecilia Bulldogs",      "away_team": "St. Patrick",              "home_score": null, "away_score": null, "conference": "Conference B"},
+    {"date": "2026-02-15", "home_team": "POP POP White",             "away_team": "St. Rita White",           "home_score": 20, "away_score": 35, "conference": "Conference A"},
+    {"date": "2026-02-15", "home_team": "POP POP Blue",              "away_team": "MIS",                      "home_score": 50, "away_score": 27, "conference": "Conference B"},
+    {"date": "2026-02-15", "home_team": "St. Monica Blue",           "away_team": "STA D2 Blue",              "home_score": 25, "away_score": 37, "conference": "Conference A"},
+    {"date": "2026-02-15", "home_team": "St. Rita Green",            "away_team": "St. Monica Carolina",     "home_score": 26, "away_score": 29, "conference": "Conference B"},
+
+    {"date": "2026-02-21", "home_team": "POP POP White",             "away_team": "CKS Gold",                 "home_score": null, "away_score": null, "conference": "Conference A"},
+    {"date": "2026-02-21", "home_team": "St. Monica Carolina",       "away_team": "St. Cecilia Bulldogs",     "home_score": null, "away_score": null, "conference": "Conference B"},
+
+    {"date": "2026-02-28", "home_team": "St. Cecilia Bulldogs",      "away_team": "POP POP Blue",             "home_score": null, "away_score": null, "conference": "Conference B"},
+
+    {"date": "2026-03-01", "home_team": "CKS Red",                   "away_team": "St. Cecilia Bulldogs",     "home_score": null, "away_score": null, "conference": "Conference B"}
+  ]
 }
