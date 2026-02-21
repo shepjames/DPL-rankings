@@ -1,0 +1,33 @@
+{
+  "_source": "Manually entered from DPL website standings — 7th Grade Division 2 Boys Basketball",
+  "_note": "Game scores not available; score-differential tiebreaker will show n/a. Head-to-head tiebreaker requires game results to be entered in the 'games' array.",
+  "fetched_at": "2026-02-21T00:00:00",
+  "division": "7th Grade Division 2",
+  "gender": "Boys",
+  "conferences": {
+    "Conference A": [
+      {"team": "St. Philip-St. Augustine", "wins": 5, "losses": 1, "conference_wins": 5, "conference_losses": 1, "conference": "Conference A"},
+      {"team": "St. Rita White",            "wins": 5, "losses": 1, "conference_wins": 5, "conference_losses": 1, "conference": "Conference A"},
+      {"team": "STA D2 Blue",               "wins": 4, "losses": 1, "conference_wins": 4, "conference_losses": 1, "conference": "Conference A"},
+      {"team": "Highlands",                 "wins": 4, "losses": 2, "conference_wins": 4, "conference_losses": 2, "conference": "Conference A"},
+      {"team": "CKS Gold",                  "wins": 4, "losses": 2, "conference_wins": 4, "conference_losses": 2, "conference": "Conference A"},
+      {"team": "St. Monica White",          "wins": 4, "losses": 3, "conference_wins": 4, "conference_losses": 3, "conference": "Conference A"},
+      {"team": "St. Monica Blue",           "wins": 3, "losses": 3, "conference_wins": 3, "conference_losses": 3, "conference": "Conference A"},
+      {"team": "St. Mark",                  "wins": 2, "losses": 5, "conference_wins": 2, "conference_losses": 5, "conference": "Conference A"},
+      {"team": "POP POP White",             "wins": 1, "losses": 7, "conference_wins": 1, "conference_losses": 7, "conference": "Conference A"},
+      {"team": "All Saints Eagles",         "wins": 0, "losses": 7, "conference_wins": 0, "conference_losses": 7, "conference": "Conference A"}
+    ],
+    "Conference B": [
+      {"team": "St. Patrick",               "wins": 7, "losses": 0, "conference_wins": 7, "conference_losses": 0, "conference": "Conference B"},
+      {"team": "St. Rita Black",            "wins": 4, "losses": 1, "conference_wins": 4, "conference_losses": 1, "conference": "Conference B"},
+      {"team": "St. Monica Carolina",       "wins": 4, "losses": 2, "conference_wins": 4, "conference_losses": 2, "conference": "Conference B"},
+      {"team": "St. Rita Green",            "wins": 5, "losses": 3, "conference_wins": 5, "conference_losses": 3, "conference": "Conference B"},
+      {"team": "POP POP Blue",              "wins": 4, "losses": 3, "conference_wins": 4, "conference_losses": 3, "conference": "Conference B"},
+      {"team": "MIS",                       "wins": 3, "losses": 4, "conference_wins": 3, "conference_losses": 4, "conference": "Conference B"},
+      {"team": "STA D2 Silver",             "wins": 2, "losses": 3, "conference_wins": 2, "conference_losses": 3, "conference": "Conference B"},
+      {"team": "CKS Red",                   "wins": 1, "losses": 6, "conference_wins": 1, "conference_losses": 6, "conference": "Conference B"},
+      {"team": "St. Cecilia Bulldogs",      "wins": 0, "losses": 8, "conference_wins": 0, "conference_losses": 8, "conference": "Conference B"}
+    ]
+  },
+  "games": []
+}

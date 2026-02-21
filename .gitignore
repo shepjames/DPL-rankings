@@ -3,4 +3,3 @@ __pycache__/
 *.pyo
 .venv/
 venv/
-data/dpl_data.json
