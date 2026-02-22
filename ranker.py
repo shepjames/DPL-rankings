@@ -41,10 +41,16 @@ class Team:
     # Populated from game results
     points_for: int = 0
     points_against: int = 0
-    games_played: int = 0          # from actual game results
+    games_played: int = 0          # from actual scored game results
 
     # Head-to-head record vs other teams {opponent: (wins, losses, point_diff)}
     h2h: dict[str, list[int]] = field(default_factory=lambda: defaultdict(lambda: [0, 0, 0]))
+
+    # Opponents faced (one entry per game played, including W/L-only games)
+    opponents_faced: list = field(default_factory=list)
+
+    # Computed after all teams are built
+    opp_win_pct: float = 0.0
 
     # ------------------------------------------------------------------ #
     @property
@@ -125,8 +131,8 @@ def build_teams(data: dict) -> dict[str, Team]:
         hs = game.get("home_score")
         as_ = game.get("away_score")
 
-        # Only process completed games
-        if hs is None or as_ is None:
+        # Skip games with no teams or upcoming games with no result at all
+        if not home or not away:
             continue
 
         # Auto-create teams that appear in results but not in standings
@@ -134,12 +140,56 @@ def build_teams(data: dict) -> dict[str, Team]:
             if name and name not in teams:
                 teams[name] = Team(name=name, conference=conf or "Unknown")
 
+        # Track opponents for ALL completed games (scored or W/L-only)
+        # so OWP includes every game actually played, not just scored ones.
+        # We treat a game as "played" when at least one score exists OR it has
+        # a W/L note (null scores on upcoming games are skipped entirely).
+        has_result = (hs is not None and as_ is not None) or game.get("_note", "").startswith("W/L only")
+        if has_result:
+            if home in teams:
+                teams[home].opponents_faced.append(away)
+            if away in teams:
+                teams[away].opponents_faced.append(home)
+
+        # Score-based stats only for fully scored games
+        if hs is None or as_ is None:
+            continue
+
         if home in teams:
             teams[home].record_game(hs, as_, away)
         if away in teams:
             teams[away].record_game(as_, hs, home)
 
+    # Compute opponent winning percentages now that all teams are built
+    _compute_owp(teams)
+
     return teams
+
+
+# ---------------------------------------------------------------------------
+# Opponent winning percentage
+# ---------------------------------------------------------------------------
+
+
+def _compute_owp(teams: dict[str, Team]) -> None:
+    """
+    Fill in opp_win_pct for every team.
+
+    For each game a team played, look up that opponent's overall win percentage
+    (from standings) and average them.  If a team played the same opponent
+    twice, that opponent's win% is counted twice — this weights OWP by games
+    played rather than unique opponents.
+    """
+    for team in teams.values():
+        if not team.opponents_faced:
+            team.opp_win_pct = 0.0
+            continue
+        total = sum(
+            teams[opp].win_pct
+            for opp in team.opponents_faced
+            if opp in teams
+        )
+        team.opp_win_pct = total / len(team.opponents_faced)
 
 
 # ---------------------------------------------------------------------------
@@ -287,16 +337,17 @@ def format_rankings(
         "=" * width,
         f"  {title}",
         "=" * width,
-        f"  {'Rank':<6} {'Team':<28} {'Conf':<20} {'W-L':>5} {'Conf W-L':>9} {'Diff/G':>7}",
+        f"  {'Rank':<6} {'Team':<28} {'Conf':<20} {'W-L':>5} {'Conf W-L':>9} {'OWP':>6} {'Diff/G':>7}",
         "-" * width,
     ]
 
     for rank, team in ranked:
         wl = f"{team.wins}-{team.losses}"
         conf_wl = f"{team.conference_wins}-{team.conference_losses}"
+        owp = f"{team.opp_win_pct:.3f}" if team.opponents_faced else "  n/a"
         diff = f"{team.score_diff:+.1f}" if team.games_played else "  n/a"
         lines.append(
-            f"  {rank:<6} {team.name:<28} {team.conference:<20} {wl:>5} {conf_wl:>9} {diff:>7}"
+            f"  {rank:<6} {team.name:<28} {team.conference:<20} {wl:>5} {conf_wl:>9} {owp:>6} {diff:>7}"
         )
 
     lines.append("=" * width)
@@ -307,6 +358,8 @@ def format_rankings(
     lines.append("    3. Head-to-head win % (among tied teams)")
     lines.append("    4. Head-to-head score differential (among tied teams)")
     lines.append(f"    5. Overall score differential (capped at ±{MAX_DIFF_PER_GAME} pts/game)")
+    lines.append("")
+    lines.append("  OWP = Opponent Winning Percentage (avg win% of all opponents faced)")
     lines.append("")
 
     if show_h2h:
