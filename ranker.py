@@ -46,6 +46,9 @@ class Team:
     # Head-to-head record vs other teams {opponent: (wins, losses, point_diff)}
     h2h: dict[str, list[int]] = field(default_factory=lambda: defaultdict(lambda: [0, 0, 0]))
 
+    # Strength of schedule: weighted avg win% of all opponents faced
+    sos: float = 0.0
+
     # ------------------------------------------------------------------ #
     @property
     def win_pct(self) -> float:
@@ -219,6 +222,24 @@ def _resolve_ties(tied: list[Team]) -> list[Team]:
     return result
 
 
+def compute_sos(teams: dict[str, Team]) -> None:
+    """
+    Compute strength of schedule for each team.
+
+    SOS = weighted average win% of all opponents faced, weighted by number
+    of games played against each opponent.
+    """
+    for team in teams.values():
+        total_games = 0
+        weighted_sum = 0.0
+        for opp_name, (w, l, _) in team.h2h.items():
+            games_vs_opp = w + l
+            if opp_name in teams and games_vs_opp > 0:
+                weighted_sum += teams[opp_name].win_pct * games_vs_opp
+                total_games += games_vs_opp
+        team.sos = weighted_sum / total_games if total_games else 0.0
+
+
 def rank_teams(data: dict) -> list[tuple[int, Team]]:
     """
     Rank all 7GD2 teams across all conferences.
@@ -230,6 +251,8 @@ def rank_teams(data: dict) -> list[tuple[int, Team]]:
 
     if not teams:
         return []
+
+    compute_sos(teams)
 
     all_teams = list(teams.values())
 
@@ -276,22 +299,23 @@ def format_rankings(ranked: list[tuple[int, Team]], show_h2h: bool = False) -> s
 
     lines = [
         "",
-        "=" * 78,
+        "=" * 86,
         "  DPL 7th Grade Division 2 Boys Basketball — Cross-Conference Rankings",
-        "=" * 78,
-        f"  {'Rank':<6} {'Team':<28} {'Conf':<20} {'W-L':>5} {'Conf W-L':>9} {'Diff/G':>7}",
-        "-" * 78,
+        "=" * 86,
+        f"  {'Rank':<6} {'Team':<28} {'Conf':<20} {'W-L':>5} {'Conf W-L':>9} {'Diff/G':>7} {'SOS':>7}",
+        "-" * 86,
     ]
 
     for rank, team in ranked:
         wl = f"{team.wins}-{team.losses}"
         conf_wl = f"{team.conference_wins}-{team.conference_losses}"
         diff = f"{team.score_diff:+.1f}" if team.games_played else "  n/a"
+        sos = f"{team.sos:.1%}" if team.games_played else "  n/a"
         lines.append(
-            f"  {rank:<6} {team.name:<28} {team.conference:<20} {wl:>5} {conf_wl:>9} {diff:>7}"
+            f"  {rank:<6} {team.name:<28} {team.conference:<20} {wl:>5} {conf_wl:>9} {diff:>7} {sos:>7}"
         )
 
-    lines.append("=" * 78)
+    lines.append("=" * 86)
     lines.append("")
     lines.append("  Ranking criteria (in order):")
     lines.append("    1. Overall win percentage")
@@ -302,9 +326,9 @@ def format_rankings(ranked: list[tuple[int, Team]], show_h2h: bool = False) -> s
     lines.append("")
 
     if show_h2h:
-        lines.append("-" * 78)
+        lines.append("-" * 86)
         lines.append("  Head-to-Head Summary")
-        lines.append("-" * 78)
+        lines.append("-" * 86)
         for _, team in ranked:
             if team.h2h:
                 lines.append(f"  {team.name}:")
