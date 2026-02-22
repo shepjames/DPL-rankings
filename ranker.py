@@ -187,6 +187,7 @@ def _sort_key(team: Team, tied_opponents: Optional[list[str]] = None) -> tuple:
         h2h_win_pct(team, opponents),   # 3) H2H W% vs tied teams
         h2h_score_diff(team, opponents),  # 4) H2H score diff vs tied teams
         team.score_diff,            # 5) overall score differential (capped)
+        team.sos,                   # 6) strength of schedule
     )
 
 
@@ -322,7 +323,8 @@ def format_rankings(ranked: list[tuple[int, Team]], show_h2h: bool = False) -> s
     lines.append("    2. Conference win percentage")
     lines.append("    3. Head-to-head win % (among tied teams)")
     lines.append("    4. Head-to-head score differential (among tied teams)")
-    lines.append(f"   5. Overall score differential (capped at ±{MAX_DIFF_PER_GAME} pts/game)")
+    lines.append(f"    5. Overall score differential (capped at ±{MAX_DIFF_PER_GAME} pts/game)")
+    lines.append("    6. Strength of schedule (opponents' weighted win %)")
     lines.append("")
 
     if show_h2h:
