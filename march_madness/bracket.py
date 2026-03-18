@@ -1,41 +1,50 @@
 """
-NCAA March Madness bracket structure.
+NCAA March Madness 2026 bracket structure.
 
-Defines the 64-team bracket with 4 regions, seeds 1-16, and the
+Defines the 68-team bracket with 4 regions, seeds 1-16, and the
 fixed first-round matchup pairings (1v16, 2v15, 3v14, ... 8v9).
 
-UPDATE `REGIONS` below with the actual teams once the bracket is announced.
+First Four play-in games are noted with "/" between the two teams.
+Once those games are decided, replace the entry with the winner.
 """
 
 # ---------------------------------------------------------------------------
-# Region definitions — fill in team names once the bracket is released.
-# Each region maps seed (int) -> team name (str).
+# 2026 NCAA Tournament — Official bracket (announced March 15, 2026)
+# Duke is the No. 1 overall seed. Final Four in Indianapolis (April 4-6).
+#
+# First Four play-in games (Dayton, OH — March 17-18):
+#   16-seed: Prairie View A&M vs Lehigh  → South
+#   16-seed: UMBC vs Howard              → Midwest
+#   11-seed: Texas vs NC State           → West
+#   11-seed: Miami (OH) vs SMU           → Midwest
 # ---------------------------------------------------------------------------
 
+# Region order matters: consecutive pairs meet in the Final Four.
+# East vs South (semifinal 1), West vs Midwest (semifinal 2).
 REGIONS = {
+    "East": {
+        1: "Duke", 2: "UConn", 3: "Michigan State", 4: "Kansas",
+        5: "St. John's", 6: "Louisville", 7: "UCLA", 8: "Ohio State",
+        9: "TCU", 10: "UCF", 11: "South Florida", 12: "Northern Iowa",
+        13: "Cal Baptist", 14: "North Dakota State", 15: "Furman", 16: "Siena",
+    },
     "South": {
-        1: "TBD", 2: "TBD", 3: "TBD", 4: "TBD",
-        5: "TBD", 6: "TBD", 7: "TBD", 8: "TBD",
-        9: "TBD", 10: "TBD", 11: "TBD", 12: "TBD",
-        13: "TBD", 14: "TBD", 15: "TBD", 16: "TBD",
+        1: "Florida", 2: "Houston", 3: "Illinois", 4: "Nebraska",
+        5: "Vanderbilt", 6: "North Carolina", 7: "Saint Mary's", 8: "Clemson",
+        9: "Iowa", 10: "Texas A&M", 11: "VCU", 12: "McNeese",
+        13: "Troy", 14: "Penn", 15: "Idaho", 16: "Prairie View A&M/Lehigh",
     },
     "West": {
-        1: "TBD", 2: "TBD", 3: "TBD", 4: "TBD",
-        5: "TBD", 6: "TBD", 7: "TBD", 8: "TBD",
-        9: "TBD", 10: "TBD", 11: "TBD", 12: "TBD",
-        13: "TBD", 14: "TBD", 15: "TBD", 16: "TBD",
-    },
-    "East": {
-        1: "TBD", 2: "TBD", 3: "TBD", 4: "TBD",
-        5: "TBD", 6: "TBD", 7: "TBD", 8: "TBD",
-        9: "TBD", 10: "TBD", 11: "TBD", 12: "TBD",
-        13: "TBD", 14: "TBD", 15: "TBD", 16: "TBD",
+        1: "Arizona", 2: "Purdue", 3: "Gonzaga", 4: "Arkansas",
+        5: "Wisconsin", 6: "BYU", 7: "Miami", 8: "Villanova",
+        9: "Utah State", 10: "Missouri", 11: "Texas/NC State", 12: "High Point",
+        13: "Hawaii", 14: "Kennesaw State", 15: "Queens", 16: "LIU",
     },
     "Midwest": {
-        1: "TBD", 2: "TBD", 3: "TBD", 4: "TBD",
-        5: "TBD", 6: "TBD", 7: "TBD", 8: "TBD",
-        9: "TBD", 10: "TBD", 11: "TBD", 12: "TBD",
-        13: "TBD", 14: "TBD", 15: "TBD", 16: "TBD",
+        1: "Michigan", 2: "Iowa State", 3: "Virginia", 4: "Alabama",
+        5: "Texas Tech", 6: "Tennessee", 7: "Kentucky", 8: "Georgia",
+        9: "Saint Louis", 10: "Santa Clara", 11: "Miami (OH)/SMU", 12: "Akron",
+        13: "Hofstra", 14: "Wright State", 15: "Tennessee State", 16: "UMBC/Howard",
     },
 }
 
@@ -48,8 +57,8 @@ FIRST_ROUND_MATCHUPS = [
 # Semifinal pairings by region (which regions play each other in Final Four)
 # Update if the NCAA changes the bracket layout for the year.
 FINAL_FOUR_PAIRINGS = [
-    ("South", "West"),
-    ("East", "Midwest"),
+    ("East", "South"),
+    ("West", "Midwest"),
 ]
 
 ROUND_NAMES = [
