@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact North Dallas Speech for pediatric speech therapy in Dallas, TX. Schedule a consultation for your child today.">
+  <title>Contact Us | North Dallas Speech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-north">North Dallas</span>
+        <span class="logo-speech">Speech</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="faq.html">FAQs</a></li>
+        <li><a href="contact.html" class="btn btn-nav active">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <span class="section-label">Let's Connect</span>
+      <h1>Contact Us</h1>
+      <p>We'd love to hear from you. Reach out to schedule a consultation or ask us a question.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper">
+          <h2>Send Us a Message</h2>
+          <p>Fill out the form below and we'll get back to you within 1&ndash;2 business days.</p>
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="parentName">Parent/Guardian Name <span class="required">*</span></label>
+                <input type="text" id="parentName" name="parentName" required placeholder="Your full name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required placeholder="you@email.com">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+              </div>
+              <div class="form-group">
+                <label for="childAge">Child's Age</label>
+                <input type="text" id="childAge" name="childAge" placeholder="e.g., 5 years old">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="concerns">Tell us about your concerns <span class="required">*</span></label>
+              <textarea id="concerns" name="concerns" rows="5" required placeholder="Please share a brief description of your child's communication needs or any concerns you have."></textarea>
+            </div>
+            <div class="form-group">
+              <label for="referral">How did you hear about us?</label>
+              <select id="referral" name="referral">
+                <option value="">Please select...</option>
+                <option value="pediatrician">Pediatrician referral</option>
+                <option value="school">School referral</option>
+                <option value="friend">Friend or family</option>
+                <option value="google">Google search</option>
+                <option value="facebook">Facebook</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-full">Send Message</button>
+            <p class="form-note">Your information is kept confidential and will only be used to respond to your inquiry.</p>
+          </form>
+          <div class="form-success" id="formSuccess" style="display:none;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="48" height="48"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <h3>Message Sent!</h3>
+            <p>Thank you for reaching out. We'll get back to you within 1&ndash;2 business days.</p>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <div class="contact-info-card">
+            <h3>Contact Information</h3>
+            <div class="contact-detail">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:info@northdallasspeech.com">info@northdallasspeech.com</a>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="24" height="24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div>
+                <strong>Location</strong>
+                <p>Dallas, TX 75240</p>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              <div>
+                <strong>Follow Us</strong>
+                <a href="https://www.facebook.com/northdallasspeech/" target="_blank" rel="noopener noreferrer">Facebook</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <h3>New Client?</h3>
+            <p>Here's what to expect:</p>
+            <ol>
+              <li>Submit your inquiry via the form or email</li>
+              <li>We'll schedule a brief phone consultation</li>
+              <li>If therapy is recommended, we'll schedule an evaluation</li>
+              <li>Begin your child's personalized therapy plan</li>
+            </ol>
+          </div>
+
+          <div class="contact-info-card map-placeholder">
+            <div class="image-placeholder">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="48" height="48"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Google Maps Embed<br>Dallas, TX 75240</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="logo-north">North Dallas</span>
+            <span class="logo-speech">Speech</span>
+          </a>
+          <p>Personalized speech therapy for children ages 3&ndash;18 in the North Dallas area.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Get in Touch</h4>
+          <ul>
+            <li>Dallas, TX 75240</li>
+            <li><a href="mailto:info@northdallasspeech.com">info@northdallasspeech.com</a></li>
+          </ul>
+          <div class="social-links">
+            <a href="https://www.facebook.com/northdallasspeech/" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 North Dallas Speech. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> &middot; <a href="#">HIPAA Notice</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
