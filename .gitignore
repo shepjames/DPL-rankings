@@ -3,3 +3,5 @@ __pycache__/
 *.pyo
 .venv/
 venv/
+# Sports card tracker — user collection data (personal)
+cards/data/collection.json
