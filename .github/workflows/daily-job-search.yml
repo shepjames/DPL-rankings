@@ -4,10 +4,13 @@
 # Searches for matching job postings and emails a daily report.
 #
 # Required repository secrets (Settings > Secrets and variables > Actions):
-#   JSEARCH_API_KEY     - RapidAPI key for JSearch (free tier)
-#   ADZUNA_APP_ID       - Adzuna API app ID (free tier)
-#   ADZUNA_APP_KEY      - Adzuna API app key (free tier)
+#   SERPER_API_KEY      - Serper.dev API key (free tier, 2500 searches)
 #   GMAIL_APP_PASSWORD  - Gmail App Password for sending emails
+#
+# Optional secrets for additional job sources:
+#   JSEARCH_API_KEY     - RapidAPI key for JSearch
+#   ADZUNA_APP_ID       - Adzuna API app ID
+#   ADZUNA_APP_KEY      - Adzuna API app key
 
 name: Daily Job Search Report
 
@@ -45,6 +48,7 @@ jobs:
 
       - name: Run job search agent
         env:
+          SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
           JSEARCH_API_KEY: ${{ secrets.JSEARCH_API_KEY }}
           ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
           ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}

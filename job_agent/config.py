@@ -246,10 +246,13 @@ SCORING = {
 # ---------------------------------------------------------------------------
 # API Keys & Credentials (loaded from environment variables)
 # ---------------------------------------------------------------------------
-# JSearch API (RapidAPI) — primary source, aggregates LinkedIn/Indeed/etc.
+# Serper.dev — primary source (Google Search API for job postings)
+SERPER_API_KEY = os.environ.get("SERPER_API_KEY", "")
+
+# JSearch API (RapidAPI) — optional secondary source
 JSEARCH_API_KEY = os.environ.get("JSEARCH_API_KEY", "")
 
-# Adzuna API — secondary source
+# Adzuna API — optional secondary source
 ADZUNA_APP_ID = os.environ.get("ADZUNA_APP_ID", "")
 ADZUNA_APP_KEY = os.environ.get("ADZUNA_APP_KEY", "")
 
