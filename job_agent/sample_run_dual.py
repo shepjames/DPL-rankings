@@ -369,9 +369,10 @@ DALLAS_JOBS = [
         "location": "Dallas, TX",
         "description": (
             "Lead Harvey's new Dallas office. Drive business development, establish "
-            "company presence. Partner-level law firm background, business development, "
-            "legal industry expertise, public speaking, AI knowledge. Legal technology, "
-            "legal innovation, AI transformation, generative AI."
+            "company presence in region. Collaborate with Sales and Customer Success. "
+            "Represent Harvey at panels and industry events. Partner-level background "
+            "at a law firm with strong local reputation, business development expertise, "
+            "legal industry expertise, public speaking, AI knowledge."
         ),
         "url": "https://jobs.ashbyhq.com/harvey/37702381-112a-483c-8f0a-f08e6ba0823d",
         "salary_min": None, "salary_max": None,
@@ -385,10 +386,11 @@ DALLAS_JOBS = [
         "company": "Harvey",
         "location": "Dallas, TX",
         "description": (
-            "Strategic counsel to innovation leaders on AI transformation. Advise "
-            "innovation and knowledge teams. Legal AI thought leadership, industry "
-            "forums. 5+ years legal innovation. Executive presence with CIOs/CKOs. "
-            "Legal technology, legal innovation, generative AI, responsible AI."
+            "Strategic counsel to innovation leaders defining and executing AI "
+            "transformation. Advise innovation and knowledge teams. Support firm and "
+            "client collaboration. Advance legal AI thought leadership through industry "
+            "forums and publishing. 5+ years in legal innovation at top firm, corporate "
+            "legal team, or legal tech org. Executive presence with CIOs/CKOs/CISOs."
         ),
         "url": "https://jobs.ashbyhq.com/harvey/a6ecda75-fbe4-4b91-806a-bb4f36773390",
         "salary_min": None, "salary_max": None,
