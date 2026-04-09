@@ -48,6 +48,34 @@ def _keyword_badges(keywords: list[str]) -> str:
     return " ".join(badges)
 
 
+def _brief_description(description: str, max_len: int = 180) -> str:
+    """Truncate description to a brief snippet."""
+    if not description:
+        return "No description available."
+    # Clean up whitespace
+    desc = " ".join(description.split())
+    if len(desc) <= max_len:
+        return desc
+    # Cut at last space before max_len
+    truncated = desc[:max_len].rsplit(" ", 1)[0]
+    return truncated + "..."
+
+
+def _salary_badge(job: dict) -> str:
+    """Generate a styled salary badge."""
+    salary = _salary_display(job)
+    if salary == "Not listed":
+        return (
+            '<span style="display:inline-block;background:#f0f0f0;color:#888;'
+            'padding:3px 10px;border-radius:4px;font-size:12px;">Salary not listed</span>'
+        )
+    return (
+        f'<span style="display:inline-block;background:#eafaf1;color:#1e8449;'
+        f'padding:3px 10px;border-radius:4px;font-size:12px;font-weight:600;">'
+        f'💰 {salary}</span>'
+    )
+
+
 def _job_card(job: dict, rank: int) -> str:
     """Generate HTML for a single job card."""
     breakdown = job.get("score_breakdown", {})
@@ -87,9 +115,18 @@ def _job_card(job: dict, rank: int) -> str:
         <div style="margin:8px 0;font-size:13px;">
             <span style="color:{loc_color};font-weight:600;">{loc_label}</span>
             &nbsp;&nbsp;|&nbsp;&nbsp;
-            <span style="color:#666;">💰 {_salary_display(job)}</span>
-            &nbsp;&nbsp;|&nbsp;&nbsp;
             <span style="color:#888;">📅 {job.get('date_posted', 'Recent')}</span>
+        </div>
+
+        <!-- Salary -->
+        <div style="margin:8px 0;">
+            {_salary_badge(job)}
+        </div>
+
+        <!-- Brief Description -->
+        <div style="margin:8px 0;font-size:13px;color:#555;line-height:1.4;
+                    padding:8px 10px;background:#f9f9f9;border-radius:6px;">
+            {_brief_description(job.get('description', ''))}
         </div>
 
         <div style="margin:8px 0;">
