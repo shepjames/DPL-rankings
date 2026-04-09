@@ -53,8 +53,8 @@ SAMPLE_JOBS = [
             "professionals. CIPP/US, CIPP/E, CIPM, or AIGP preferred."
         ),
         "url": "https://www.sonypicturesjobs.com/job/culver-city/executive-director-privacy-and-ai-governance-technology-and-operations/22978/91664594480",
-        "salary_min": None,
-        "salary_max": None,
+        "salary_min": 220000,
+        "salary_max": 250000,
         "date_posted": "2026-04-03",
         "source": "Sony Pictures Jobs",
         "fetched_at": "2026-04-09T07:00:00",

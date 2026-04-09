@@ -44,7 +44,7 @@ AI_TECH_JOBS = [
             "Leading global team. CIPP/US, CIPP/E, CIPM, or AIGP preferred."
         ),
         "url": "https://www.sonypicturesjobs.com/job/culver-city/executive-director-privacy-and-ai-governance-technology-and-operations/22978/91664594480",
-        "salary_min": None, "salary_max": None,
+        "salary_min": 220000, "salary_max": 250000,
         "date_posted": "2026-04-03", "source": "Sony Pictures Jobs",
     },
     {
@@ -111,7 +111,7 @@ AI_TECH_JOBS = [
             "Dallas-based AGC."
         ),
         "url": "https://www.glassdoor.com/job-listing/privacy-ai-attorney-texas-instruments-JV_IC1139977_KO0,19_KE20,37.htm",
-        "salary_min": None, "salary_max": None,
+        "salary_min": 127000, "salary_max": 185000,
         "date_posted": "2026-03-10", "source": "Glassdoor",
     },
     {
@@ -172,7 +172,7 @@ DALLAS_JOBS = [
             "Dallas-based AGC."
         ),
         "url": "https://www.glassdoor.com/job-listing/privacy-ai-attorney-texas-instruments-JV_IC1139977_KO0,19_KE20,37.htm",
-        "salary_min": None, "salary_max": None,
+        "salary_min": 127000, "salary_max": 185000,
         "date_posted": "2026-03-10", "source": "Glassdoor",
     },
     {
@@ -182,10 +182,11 @@ DALLAS_JOBS = [
         "location": "Dallas, TX",
         "description": (
             "Senior litigation counsel in AT&T Legal department. Complex commercial litigation "
-            "management, trial experience, litigation strategy. Reports to VP litigation."
+            "management, class-action and MDL experience a plus. Trial experience. "
+            "Reports to VP litigation."
         ),
         "url": "https://www.att.jobs/job/dallas/avp-senior-legal-counsel-litigation/117/90392887488",
-        "salary_min": 231700, "salary_max": 347500,
+        "salary_min": 188100, "salary_max": 282100,
         "date_posted": "2026-01-08", "source": "AT&T Careers",
     },
     {
@@ -281,7 +282,7 @@ DALLAS_JOBS = [
             "Entrepreneurial environment."
         ),
         "url": "https://www.goinhouse.com/jobs/510251140-deputy-general-counsel-at-beneficient",
-        "salary_min": None, "salary_max": None,
+        "salary_min": 250600, "salary_max": 319100,
         "date_posted": "2026-03-15", "source": "GoInhouse",
     },
     {
