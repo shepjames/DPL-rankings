@@ -1,0 +1,62 @@
+# Daily Legal AI Job Search Agent
+#
+# Runs every weekday morning at 7:00 AM Central Time (12:00 UTC)
+# Searches for matching job postings and emails a daily report.
+#
+# Required repository secrets (Settings > Secrets and variables > Actions):
+#   JSEARCH_API_KEY     - RapidAPI key for JSearch (free tier)
+#   ADZUNA_APP_ID       - Adzuna API app ID (free tier)
+#   ADZUNA_APP_KEY      - Adzuna API app key (free tier)
+#   GMAIL_APP_PASSWORD  - Gmail App Password for sending emails
+
+name: Daily Job Search Report
+
+on:
+  schedule:
+    # 12:00 UTC = 7:00 AM Central (CDT) / 6:00 AM Central (CST)
+    - cron: '0 12 * * 1-5'  # Mon-Fri only
+
+  # Allow manual trigger from GitHub Actions UI
+  workflow_dispatch:
+
+jobs:
+  search-and-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r job_agent/requirements.txt
+
+      - name: Restore seen jobs cache
+        uses: actions/cache@v4
+        with:
+          path: job_agent/data/seen_jobs.json
+          key: seen-jobs-${{ github.run_number }}
+          restore-keys: |
+            seen-jobs-
+
+      - name: Run job search agent
+        env:
+          JSEARCH_API_KEY: ${{ secrets.JSEARCH_API_KEY }}
+          ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
+          ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
+          GMAIL_ADDRESS: shepjames@gmail.com
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        working-directory: job_agent
+        run: python main.py --save-results data/latest_results.json
+
+      - name: Upload results artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: job-search-results-${{ github.run_number }}
+          path: job_agent/data/latest_results.json
+          retention-days: 30

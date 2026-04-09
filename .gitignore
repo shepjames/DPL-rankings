@@ -3,3 +3,8 @@ __pycache__/
 *.pyo
 .venv/
 venv/
+
+# Job agent secrets and runtime data
+job_agent/.env
+job_agent/data/seen_jobs.json
+job_agent/data/latest_results.json
