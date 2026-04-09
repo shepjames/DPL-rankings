@@ -43,9 +43,14 @@ PROFILE = {
 
 # ---------------------------------------------------------------------------
 # Skills & Keywords (used for matching/scoring)
+#
+# Organized around the 9 resume skill areas, plus a legal tech vendor tier.
 # ---------------------------------------------------------------------------
-# Tier 1: Core differentiators (highest weight)
+
+# Tier 1: Core differentiators (highest weight — 10 pts each)
+# Maps to: Artificial Intelligence, Legal Technology/Legal Operations, Data Privacy
 TIER1_KEYWORDS = [
+    # -- Artificial Intelligence --
     "artificial intelligence",
     "AI governance",
     "AI policy",
@@ -53,44 +58,132 @@ TIER1_KEYWORDS = [
     "responsible AI",
     "AI compliance",
     "AI risk",
+    "AI acceptable use",
+    "AI ethics",
+    "AIGP",
+    # -- Legal Technology / Legal Operations --
     "legal operations",
     "legal technology",
     "legal tech",
     "legaltech",
     "legal ops",
-]
-
-# Tier 2: Strong match skills
-TIER2_KEYWORDS = [
+    "legal innovation",
+    # -- Data Privacy --
     "data privacy",
     "privacy counsel",
     "privacy officer",
+    "chief privacy officer",
     "CCPA",
     "GDPR",
-    "technology transactions",
-    "SaaS agreements",
-    "cybersecurity",
-    "incident response",
-    "information governance",
-    "contract lifecycle management",
-    "CLM",
-    "e-discovery",
-    "AIGP",
     "CIPP",
 ]
 
-# Tier 3: Relevant but broader
+# Tier 2: Strong match skills (5 pts each)
+# Maps to: Technology Transactions, Cybersecurity Incident Response,
+#          People Leadership, Outside Counsel Management
+TIER2_KEYWORDS = [
+    # -- Technology Transactions --
+    "technology transactions",
+    "SaaS agreements",
+    "SaaS contracts",
+    "data license",
+    "DPA",
+    "data processing agreement",
+    "software licensing",
+    "cloud agreements",
+    "technology contracts",
+    "IT agreements",
+    # -- Cybersecurity Incident Response --
+    "cybersecurity",
+    "cyber incident",
+    "incident response",
+    "CISO",
+    "information security",
+    "data breach",
+    "TSA compliance",
+    "cyber insurance",
+    # -- People Leadership --
+    "people leadership",
+    "team leadership",
+    "managing team",
+    "direct reports",
+    "lead a team",
+    "leadership of legal",
+    # -- Outside Counsel Management --
+    "outside counsel management",
+    "outside counsel",
+    "law firm management",
+    "legal spend",
+    "preferred law firm",
+    "vendor management",
+]
+
+# Tier 3: Relevant but broader (2 pts each)
+# Maps to: Commercial Litigation, Trademark/IP Litigation,
+#          and adjacent skills
 TIER3_KEYWORDS = [
+    # -- Commercial Litigation --
     "commercial litigation",
+    "complex litigation",
+    "class action",
+    "trial experience",
+    "litigation management",
+    # -- Trademark / IP Litigation --
     "intellectual property",
     "trademark",
-    "outside counsel management",
-    "vendor management",
+    "IP litigation",
+    "patent",
+    "trade secret",
+    "data scraping",
+    # -- Adjacent / General --
+    "information governance",
+    "e-discovery",
     "regulatory compliance",
     "enterprise technology",
     "digital transformation",
-    "people leadership",
-    "team leadership",
+    "contract lifecycle management",
+    "CLM",
+]
+
+# Tier 4: Legal tech vendor references (1 pt each — small signal boost)
+# Indicates tech-forward legal team using tools James has experience with.
+LEGAL_TECH_VENDORS = [
+    # -- Matter Management --
+    "TeamConnect",
+    "matter management",
+    "legal matter management",
+    # -- Document Management --
+    "iManage",
+    "document management system",
+    "NetDocuments",
+    # -- E-Billing --
+    "Collaborati",
+    "e-billing",
+    "legal billing",
+    "BrightFlag",
+    # -- Contract Lifecycle Management --
+    "Ironclad",
+    "Agiloft",
+    "Icertis",
+    "DocuSign CLM",
+    "ContractPodAi",
+    # -- E-Discovery --
+    "CS Disco",
+    "DISCO",
+    "Relativity",
+    "Logikcull",
+    # -- GenAI Legal Tools --
+    "Harvey",
+    "Harvey AI",
+    "Legora",
+    "Eudia",
+    "CoCounsel",
+    "Luminance",
+    "Spellbook",
+    "EvenUp",
+    "Casetext",
+    "Robin AI",
+    "Klarity",
 ]
 
 # ---------------------------------------------------------------------------
@@ -138,9 +231,10 @@ EXCLUDE_TITLE_KEYWORDS = [
 # Scoring Weights
 # ---------------------------------------------------------------------------
 SCORING = {
-    "tier1_keyword_weight": 10,  # per keyword match
-    "tier2_keyword_weight": 5,
-    "tier3_keyword_weight": 2,
+    "tier1_keyword_weight": 10,  # per match — AI, legal tech, data privacy
+    "tier2_keyword_weight": 5,   # per match — tech transactions, cyber, leadership, OCM
+    "tier3_keyword_weight": 2,   # per match — litigation, IP, adjacent
+    "vendor_keyword_weight": 1,  # per match — legal tech vendor/tool references
     "preferred_location_bonus": 25,
     "acceptable_location_bonus": 10,
     "salary_meets_floor_bonus": 15,

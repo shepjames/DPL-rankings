@@ -12,6 +12,7 @@ from config import (
     TIER1_KEYWORDS,
     TIER2_KEYWORDS,
     TIER3_KEYWORDS,
+    LEGAL_TECH_VENDORS,
     PREFERRED_LOCATIONS,
     ACCEPTABLE_LOCATIONS,
     EXCLUDE_TITLE_KEYWORDS,
@@ -65,16 +66,18 @@ def score_job(job: dict) -> dict:
             return job
 
     # ------------------------------------------------------------------
-    # Keyword scoring
+    # Keyword scoring (Tiers 1-3: resume skills, Tier 4: legal tech vendors)
     # ------------------------------------------------------------------
     t1_count, t1_matched = _count_keyword_matches(searchable_text, TIER1_KEYWORDS)
     t2_count, t2_matched = _count_keyword_matches(searchable_text, TIER2_KEYWORDS)
     t3_count, t3_matched = _count_keyword_matches(searchable_text, TIER3_KEYWORDS)
+    vendor_count, vendor_matched = _count_keyword_matches(searchable_text, LEGAL_TECH_VENDORS)
 
     keyword_score = (
         t1_count * SCORING["tier1_keyword_weight"]
         + t2_count * SCORING["tier2_keyword_weight"]
         + t3_count * SCORING["tier3_keyword_weight"]
+        + vendor_count * SCORING["vendor_keyword_weight"]
     )
 
     # ------------------------------------------------------------------
@@ -141,7 +144,7 @@ def score_job(job: dict) -> dict:
         "salary": salary_score,
         "equity": equity_score,
     }
-    job["matched_keywords"] = t1_matched + t2_matched + t3_matched
+    job["matched_keywords"] = t1_matched + t2_matched + t3_matched + vendor_matched
     job["excluded"] = False
     job["exclude_reason"] = ""
 
