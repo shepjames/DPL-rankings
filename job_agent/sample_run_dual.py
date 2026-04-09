@@ -128,6 +128,42 @@ AI_TECH_JOBS = [
         "salary_min": None, "salary_max": None,
         "date_posted": "2026-03-05", "source": "GoInhouse",
     },
+    {
+        # SOURCE: Harvey careers / Ashby
+        # Confirmed: https://jobs.ashbyhq.com/harvey/37702381-112a-483c-8f0a-f08e6ba0823d
+        "id": "ai_009",
+        "title": "Operating Partner, Dallas",
+        "company": "Harvey",
+        "location": "Dallas, TX",
+        "description": (
+            "Lead Harvey's new Dallas office. Drive business development, establish "
+            "company presence in region. Collaborate with Sales and Customer Success. "
+            "Represent Harvey at panels and industry events. Partner-level background "
+            "at a law firm with strong local reputation, business development expertise, "
+            "legal industry expertise, public speaking, AI knowledge."
+        ),
+        "url": "https://jobs.ashbyhq.com/harvey/37702381-112a-483c-8f0a-f08e6ba0823d",
+        "salary_min": None, "salary_max": None,
+        "date_posted": "2026-03-15", "source": "Harvey Careers (Ashby)",
+    },
+    {
+        # SOURCE: Harvey careers / Ashby
+        # Confirmed: https://jobs.ashbyhq.com/harvey/a6ecda75-fbe4-4b91-806a-bb4f36773390
+        "id": "ai_010",
+        "title": "Legal Innovation Partner, Dallas",
+        "company": "Harvey",
+        "location": "Dallas, TX",
+        "description": (
+            "Strategic counsel to innovation leaders defining and executing AI "
+            "transformation. Advise innovation and knowledge teams. Support firm and "
+            "client collaboration. Advance legal AI thought leadership through industry "
+            "forums and publishing. 5+ years in legal innovation at top firm, corporate "
+            "legal team, or legal tech org. Executive presence with CIOs/CKOs/CISOs."
+        ),
+        "url": "https://jobs.ashbyhq.com/harvey/a6ecda75-fbe4-4b91-806a-bb4f36773390",
+        "salary_min": None, "salary_max": None,
+        "date_posted": "2026-03-20", "source": "Harvey Careers (Ashby)",
+    },
 ]
 
 # =========================================================================
@@ -323,6 +359,75 @@ DALLAS_JOBS = [
         "url": "https://www.legal.io/jobs/5333248/Full-time/AVP-Senior-Counsel-Office-of-the-General-Counsel-Legal-Obligations/Plano/Texas",
         "salary_min": None, "salary_max": None,
         "date_posted": "2026-02-15", "source": "Legal.io",
+    },
+    {
+        # SOURCE: Harvey careers / Ashby
+        # Confirmed: https://jobs.ashbyhq.com/harvey/37702381-112a-483c-8f0a-f08e6ba0823d
+        "id": "dal_015",
+        "title": "Operating Partner, Dallas",
+        "company": "Harvey",
+        "location": "Dallas, TX",
+        "description": (
+            "Lead Harvey's new Dallas office. Drive business development, establish "
+            "company presence. Partner-level law firm background, business development, "
+            "legal industry expertise, public speaking, AI knowledge. Legal technology, "
+            "legal innovation, AI transformation, generative AI."
+        ),
+        "url": "https://jobs.ashbyhq.com/harvey/37702381-112a-483c-8f0a-f08e6ba0823d",
+        "salary_min": None, "salary_max": None,
+        "date_posted": "2026-03-15", "source": "Harvey Careers (Ashby)",
+    },
+    {
+        # SOURCE: Harvey careers / Ashby
+        # Confirmed: https://jobs.ashbyhq.com/harvey/a6ecda75-fbe4-4b91-806a-bb4f36773390
+        "id": "dal_016",
+        "title": "Legal Innovation Partner, Dallas",
+        "company": "Harvey",
+        "location": "Dallas, TX",
+        "description": (
+            "Strategic counsel to innovation leaders on AI transformation. Advise "
+            "innovation and knowledge teams. Legal AI thought leadership, industry "
+            "forums. 5+ years legal innovation. Executive presence with CIOs/CKOs. "
+            "Legal technology, legal innovation, generative AI, responsible AI."
+        ),
+        "url": "https://jobs.ashbyhq.com/harvey/a6ecda75-fbe4-4b91-806a-bb4f36773390",
+        "salary_min": None, "salary_max": None,
+        "date_posted": "2026-03-20", "source": "Harvey Careers (Ashby)",
+    },
+    {
+        # SOURCE: GoInhouse / Federal Reserve Careers
+        # Confirmed: https://www.goinhouse.com/jobs/518612296-deputy-general-counsel-at-federal-reserve
+        # NOTE: Applications due April 10, 2026
+        "id": "dal_017",
+        "title": "Deputy General Counsel",
+        "company": "Federal Reserve Bank of Dallas",
+        "location": "Dallas, TX",
+        "description": (
+            "Work with General Counsel and management to provide legal, ethics, and "
+            "compliance counsel. Collaborate with peers across the Federal Reserve System. "
+            "Ensure practices sustain and enhance the Bank's reputation as a trusted "
+            "public and financial institution. Leadership role."
+        ),
+        "url": "https://www.goinhouse.com/jobs/518612296-deputy-general-counsel-at-federal-reserve",
+        "salary_min": None, "salary_max": None,
+        "date_posted": "2026-04-04", "source": "GoInhouse",
+    },
+    {
+        # SOURCE: GoInhouse / Methodist Health System Workday
+        # Confirmed: https://www.goinhouse.com/jobs/516019044-senior-counsel-transactions-and-technology-at-methodist-health-system
+        "id": "dal_018",
+        "title": "Senior Counsel - Transactions and Technology",
+        "company": "Methodist Health System",
+        "location": "Dallas, TX",
+        "description": (
+            "Advise on corporate matters, contract negotiation and drafting, real estate "
+            "transactions, due diligence. Technology transactions, SaaS agreements. "
+            "Collaborate with fellow counsel and business partners at all levels of "
+            "hospital management. In-house experience preferred."
+        ),
+        "url": "https://www.goinhouse.com/jobs/516019044-senior-counsel-transactions-and-technology-at-methodist-health-system",
+        "salary_min": None, "salary_max": None,
+        "date_posted": "2026-03-25", "source": "GoInhouse",
     },
 ]
 
