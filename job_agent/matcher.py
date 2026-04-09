@@ -108,6 +108,9 @@ def score_job(job: dict) -> dict:
         r"senior vice president.*legal",
         r"head of legal",
         r"director.*legal",
+        r"operating partner",
+        r"legal innovation partner",
+        r"managing director",
     ]
     for pattern in seniority_patterns:
         if re.search(pattern, title, re.IGNORECASE):

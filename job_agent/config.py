@@ -68,6 +68,9 @@ TIER1_KEYWORDS = [
     "legaltech",
     "legal ops",
     "legal innovation",
+    "legal innovation partner",
+    "operating partner",
+    "AI transformation",
     # -- Data Privacy --
     "data privacy",
     "privacy counsel",
@@ -190,19 +193,30 @@ LEGAL_TECH_VENDORS = [
 # Search Queries (used across job search APIs)
 # ---------------------------------------------------------------------------
 SEARCH_QUERIES = [
+    # In-house AI governance / privacy roles
     "Associate General Counsel AI governance",
     "Deputy General Counsel artificial intelligence",
     "General Counsel AI privacy",
     "AI governance counsel",
-    "legal operations AI technology",
     "Associate General Counsel data privacy cybersecurity",
-    "Associate General Counsel technology transactions",
     "Deputy General Counsel privacy AI",
     "VP Legal AI governance",
+    # In-house technology / legal ops roles
+    "Associate General Counsel technology transactions",
     "General Counsel technology",
     "Associate General Counsel information governance",
-    "legal counsel AI policy",
     "Associate General Counsel legal technology",
+    "legal operations AI technology",
+    "legal counsel AI policy",
+    # Legal tech company roles (Harvey, Eudia, Ironclad, etc.)
+    "legal tech company operating partner Dallas",
+    "legal innovation partner AI",
+    "Harvey AI legal jobs Dallas",
+    "legal tech startup general counsel VP legal",
+    "legal AI company customer success director",
+    # Dallas-specific broader search
+    "Dallas Associate General Counsel in-house",
+    "Dallas Deputy General Counsel",
 ]
 
 # ---------------------------------------------------------------------------
