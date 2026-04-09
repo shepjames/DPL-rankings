@@ -7,7 +7,6 @@ Builds a clean, mobile-friendly HTML email summarizing today's job matches.
 from datetime import datetime
 
 from config import MAX_JOBS_IN_REPORT, PROFILE
-from contacts import suggest_contacts
 
 
 def _salary_display(job: dict) -> str:
@@ -47,35 +46,6 @@ def _keyword_badges(keywords: list[str]) -> str:
             f'+{len(keywords) - 8} more</span>'
         )
     return " ".join(badges)
-
-
-def _contact_suggestions_html(job: dict) -> str:
-    """Generate HTML for contact suggestions for a job."""
-    contacts = suggest_contacts(job)
-    if not contacts:
-        return ""
-
-    rows = []
-    for c in contacts:
-        linkedin_link = ""
-        if c.get("linkedin"):
-            linkedin_link = f' · <a href="{c["linkedin"]}" style="color:#2980b9;text-decoration:none;font-size:11px;">LinkedIn</a>'
-        rows.append(
-            f'<div style="margin:3px 0;font-size:12px;">'
-            f'<strong>{c["name"]}</strong> — {c["title"]}, {c["org"]}'
-            f'{linkedin_link}'
-            f'<br><span style="color:#888;font-size:11px;">{c["relationship"]}</span>'
-            f'</div>'
-        )
-
-    return (
-        f'<div style="margin-top:10px;padding:10px;background:#fef9e7;border-left:3px solid #f39c12;'
-        f'border-radius:0 6px 6px 0;">'
-        f'<div style="font-size:12px;font-weight:700;color:#7d6608;margin-bottom:6px;">'
-        f'🤝 Suggested Contacts</div>'
-        f'{"".join(rows)}'
-        f'</div>'
-    )
 
 
 def _job_card(job: dict, rank: int) -> str:
@@ -135,7 +105,6 @@ def _job_card(job: dict, rank: int) -> str:
             &nbsp;·&nbsp; via {job.get('source', 'Unknown')}
         </div>
 
-        {_contact_suggestions_html(job)}
     </div>
     """
 
