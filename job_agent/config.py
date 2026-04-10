@@ -119,6 +119,13 @@ TIER2_KEYWORDS = [
     "legal spend",
     "preferred law firm",
     "vendor management",
+    # -- Airline / Aviation / Transportation --
+    "airline",
+    "aviation",
+    "transportation",
+    "FAA",
+    "DOT",
+    "TSA",
 ]
 
 # Tier 3: Relevant but broader (2 pts each)
@@ -214,6 +221,11 @@ SEARCH_QUERIES = [
     "Harvey AI legal jobs Dallas",
     "legal tech startup general counsel VP legal",
     "legal AI company customer success director",
+    # Airline / aviation / transportation legal roles
+    "airline general counsel VP legal",
+    "airline associate general counsel",
+    "aviation general counsel deputy",
+    "transportation company VP legal counsel",
     # Dallas-specific broader search
     "Dallas Associate General Counsel in-house",
     "Dallas Deputy General Counsel",
