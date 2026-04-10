@@ -241,9 +241,10 @@ EXCLUDE_TITLE_KEYWORDS = [
     "law clerk",
 ]
 
-# Companies already applied to — exclude from reports
-APPLIED_COMPANIES = [
-    "Harvey",
+# Jobs already applied to — exclude specific postings (by URL substring)
+APPLIED_JOBS = [
+    "harvey/37702381",   # Harvey Operating Partner, Dallas
+    "harvey/a6ecda75",   # Harvey Legal Innovation Partner, Dallas
 ]
 
 # ---------------------------------------------------------------------------

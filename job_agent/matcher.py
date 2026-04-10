@@ -16,7 +16,7 @@ from config import (
     PREFERRED_LOCATIONS,
     ACCEPTABLE_LOCATIONS,
     EXCLUDE_TITLE_KEYWORDS,
-    APPLIED_COMPANIES,
+    APPLIED_JOBS,
     PROFILE,
     SCORING,
 )
@@ -68,13 +68,14 @@ def score_job(job: dict) -> dict:
             job["exclude_reason"] = f"Title contains excluded keyword: '{exclude_kw}'"
             return job
 
-    for applied_co in APPLIED_COMPANIES:
-        if applied_co.lower() in company_lower:
+    job_url = job.get("url", "").lower()
+    for applied_id in APPLIED_JOBS:
+        if applied_id.lower() in job_url:
             job["score"] = 0
             job["score_breakdown"] = {}
             job["matched_keywords"] = []
             job["excluded"] = True
-            job["exclude_reason"] = f"Already applied to: {applied_co}"
+            job["exclude_reason"] = f"Already applied (matched: {applied_id})"
             return job
 
     # ------------------------------------------------------------------
