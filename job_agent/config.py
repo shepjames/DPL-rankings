@@ -176,6 +176,9 @@ TIER3_KEYWORDS = [
     "digital transformation",
     "contract lifecycle management",
     "CLM",
+    "insurtech",
+    "insurance",
+    "financial services",
 ]
 
 # Tier 4: Legal tech vendor references (1 pt each — small signal boost)
@@ -260,6 +263,12 @@ SEARCH_QUERIES = [
     # Dallas-specific broader search
     "Dallas Associate General Counsel in-house",
     "Dallas Deputy General Counsel",
+    "Dallas senior counsel in-house hiring",
+    "Dallas General Counsel in-house new posting",
+    "Frisco Plano Irving general counsel senior counsel",
+    "Dallas in-house legal department hiring counsel",
+    # Dallas major employers — legal departments actively hiring
+    "Integrity Marketing Group Dallas legal counsel",
 ]
 
 # ---------------------------------------------------------------------------
