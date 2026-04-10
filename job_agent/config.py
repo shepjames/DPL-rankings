@@ -29,6 +29,25 @@ PROFILE = {
     ],
     "current_role": "Associate General Counsel – Information Governance & Legal Operations",
     "current_employer": "Southwest Airlines",
+    "team_size": 16,
+    "contract_portfolio": "$1B+ TCV, 90+ active agreements",
+    "key_vendors": [
+        "AWS", "Anthropic", "Microsoft", "Workday",
+        "CrowdStrike", "ServiceNow",
+    ],
+    "legal_tech_stack": [
+        "Ironclad (CLM)", "iManage (DMS)", "TeamConnect (matter mgmt)",
+        "DISCO (e-discovery)", "Zapproved/Exterro (preservation)",
+        "Eudia (AI-augmented legal)", "Harvey (AI pilot, 30+ users)",
+    ],
+    "notable_achievements": [
+        "$1M+ outside counsel spend reduction FY 2025",
+        "22-firm preferred panel network, $1M+ savings Q1 2026",
+        "Ironclad CLM: 1,000+ contract workflows in first 3 months",
+        "Two California jury trial defense verdicts ($60M+ and $25M+)",
+        "$76M cyber insurance claim ($50M paid by four carriers)",
+        "Hertz creditors' committee chair: 100% recovery on $35M+ claim",
+    ],
     "target_levels": [
         "Associate General Counsel",
         "Deputy General Counsel",
@@ -36,6 +55,8 @@ PROFILE = {
         "VP Legal",
         "SVP Legal",
         "Chief Legal Officer",
+        "Operating Partner",
+        "Legal Innovation Partner",
     ],
     "salary_floor": 225000,
     "prefers_equity": True,
@@ -105,6 +126,8 @@ TIER2_KEYWORDS = [
     "data breach",
     "TSA compliance",
     "cyber insurance",
+    "third-party risk management",
+    "third party risk",
     # -- People Leadership --
     "people leadership",
     "team leadership",
@@ -177,11 +200,13 @@ LEGAL_TECH_VENDORS = [
     "Icertis",
     "DocuSign CLM",
     "ContractPodAi",
-    # -- E-Discovery --
+    # -- E-Discovery & Legal Preservation --
     "CS Disco",
     "DISCO",
     "Relativity",
     "Logikcull",
+    "Zapproved",
+    "Exterro",
     # -- GenAI Legal Tools --
     "Harvey",
     "Harvey AI",
@@ -194,6 +219,12 @@ LEGAL_TECH_VENDORS = [
     "Casetext",
     "Robin AI",
     "Klarity",
+    "Anthropic",
+    # -- Enterprise Tech Vendors (from contract portfolio) --
+    "AWS",
+    "Workday",
+    "CrowdStrike",
+    "ServiceNow",
 ]
 
 # ---------------------------------------------------------------------------
