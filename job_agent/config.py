@@ -241,6 +241,11 @@ EXCLUDE_TITLE_KEYWORDS = [
     "law clerk",
 ]
 
+# Companies already applied to — exclude from reports
+APPLIED_COMPANIES = [
+    "Harvey",
+]
+
 # ---------------------------------------------------------------------------
 # Scoring Weights
 # ---------------------------------------------------------------------------
