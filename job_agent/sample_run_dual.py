@@ -431,6 +431,40 @@ DALLAS_JOBS = [
         "salary_min": None, "salary_max": None,
         "date_posted": "2026-03-25", "source": "GoInhouse",
     },
+    {
+        # SOURCE: D.R. Horton careers / Glassdoor / Ladders
+        "id": "dal_019",
+        "title": "Head of Litigation",
+        "company": "D.R. Horton",
+        "location": "Arlington, TX",
+        "description": (
+            "Senior executive overseeing all litigation, claims management, and "
+            "dispute-resolution activities. Directs enterprise-wide litigation strategy. "
+            "Leads high-performing team managing complex legal matters, outside counsel, "
+            "and litigation risk across all divisions and business units. 12+ years "
+            "progressive litigation experience, complex high-exposure matters, proven "
+            "leadership overseeing corporate litigation teams or lead counsel."
+        ),
+        "url": "https://www.glassdoor.com/Jobs/D-R-Horton-attorney-Jobs-EI_IE2195.0,10_KO11,19.htm",
+        "salary_min": None, "salary_max": None,
+        "date_posted": "2026-03-20", "source": "Glassdoor / D.R. Horton Careers",
+    },
+    {
+        # SOURCE: D.R. Horton careers / Ladders
+        "id": "dal_020",
+        "title": "General Counsel",
+        "company": "D.R. Horton",
+        "location": "Arlington, TX",
+        "description": (
+            "Chief legal advisor to CEO, executive team and Board of Directors. "
+            "Strategic guidance on all legal, regulatory, and governance matters. "
+            "Top-level GC role at Fortune 500 homebuilder. Overall responsibility "
+            "for litigation, transactions, regulatory, corporate governance."
+        ),
+        "url": "https://www.theladders.com/job/general-counsel-drhorton-arlington-tx_84738905",
+        "salary_min": None, "salary_max": None,
+        "date_posted": "2026-03-10", "source": "Ladders / D.R. Horton Careers",
+    },
 ]
 
 

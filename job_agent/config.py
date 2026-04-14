@@ -82,6 +82,12 @@ TIER1_KEYWORDS = [
     "AI acceptable use",
     "AI ethics",
     "AIGP",
+    # -- Litigation Leadership (core differentiator) --
+    "head of litigation",
+    "chief litigation counsel",
+    "vice president litigation",
+    "VP litigation",
+    "senior litigation counsel",
     # -- Legal Technology / Legal Operations --
     "legal operations",
     "legal technology",
@@ -159,8 +165,15 @@ TIER3_KEYWORDS = [
     "commercial litigation",
     "complex litigation",
     "class action",
+    "multi-district litigation",
+    "MDL",
     "trial experience",
+    "jury trial",
     "litigation management",
+    "litigation strategy",
+    "claims management",
+    "dispute resolution",
+    "high-exposure",
     # -- Trademark / IP Litigation --
     "intellectual property",
     "trademark",
@@ -255,6 +268,12 @@ SEARCH_QUERIES = [
     "Harvey AI legal jobs Dallas",
     "legal tech startup general counsel VP legal",
     "legal AI company customer success director",
+    # Litigation leadership roles (leverages James's trial experience)
+    "Head of Litigation in-house job",
+    "VP Litigation Dallas Texas",
+    "Chief Litigation Counsel",
+    "Director of Litigation corporate",
+    "senior litigation counsel in-house Dallas",
     # Airline / aviation / transportation legal roles
     "airline general counsel VP legal",
     "airline associate general counsel",
