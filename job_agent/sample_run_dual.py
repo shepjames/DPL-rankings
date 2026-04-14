@@ -449,21 +449,85 @@ DALLAS_JOBS = [
         "salary_min": None, "salary_max": None,
         "date_posted": "2026-03-20", "source": "Glassdoor / D.R. Horton Careers",
     },
+    # D.R. Horton General Counsel — REMOVED (confirmed closed/filled)
     {
-        # SOURCE: D.R. Horton careers / Ladders
+        # SOURCE: GoInhouse
         "id": "dal_020",
-        "title": "General Counsel",
-        "company": "D.R. Horton",
-        "location": "Arlington, TX",
+        "title": "Senior General Attorney II (Compliance & Anti-Fraud)",
+        "company": "BNSF Railway",
+        "location": "Fort Worth, TX",
         "description": (
-            "Chief legal advisor to CEO, executive team and Board of Directors. "
-            "Strategic guidance on all legal, regulatory, and governance matters. "
-            "Top-level GC role at Fortune 500 homebuilder. Overall responsibility "
-            "for litigation, transactions, regulatory, corporate governance."
+            "Key leadership role within Compliance & Audit Department overseeing "
+            "critical compliance functions that ensure ethical conduct, legal "
+            "adherence, and risk mitigation across the enterprise. Compliance, "
+            "investigations, regulatory, transportation industry. Reports to "
+            "senior leadership."
         ),
-        "url": "https://www.theladders.com/job/general-counsel-drhorton-arlington-tx_84738905",
+        "url": "https://www.goinhouse.com/jobs/486633476-senior-general-attorney-ii-compliance-anti-fraud-at-bnsf-railway",
+        "salary_min": 184000, "salary_max": 245300,
+        "date_posted": "2026-03-25", "source": "GoInhouse / BNSF Careers",
+    },
+    {
+        # SOURCE: Legal.io
+        "id": "dal_021",
+        "title": "General Attorney (Intellectual Property)",
+        "company": "BNSF Railway",
+        "location": "Fort Worth, TX",
+        "description": (
+            "IP attorney for Class I railroad. Trademark, patent, trade secret "
+            "matters. Advise business units on IP strategy, licensing, and "
+            "litigation. Transportation industry, regulated environment."
+        ),
+        "url": "https://www.legal.io/jobs/5807525/Full-time/General-Attorney-Intellectual-Property-Fort-Worth-TX",
         "salary_min": None, "salary_max": None,
-        "date_posted": "2026-03-10", "source": "Ladders / D.R. Horton Careers",
+        "date_posted": "2026-03-15", "source": "Legal.io / BNSF Careers",
+    },
+    {
+        # SOURCE: LinkedIn
+        "id": "dal_022",
+        "title": "General Attorney / Senior General Attorney (Commercial & Regulatory)",
+        "company": "BNSF Railway",
+        "location": "Fort Worth, TX",
+        "description": (
+            "Advise and counsel business unit leaders on legal issues affecting "
+            "commercial and financial performance. Commercial contracts, "
+            "regulatory compliance, technology transactions, vendor agreements. "
+            "Transportation/rail industry."
+        ),
+        "url": "https://www.linkedin.com/jobs/view/general-attorney-senior-general-attorney-commercial-regulatory-fort-worth-tx-at-bnsf-railway-2869693091",
+        "salary_min": None, "salary_max": None,
+        "date_posted": "2026-03-20", "source": "LinkedIn / BNSF Careers",
+    },
+    {
+        # SOURCE: Legal.io
+        "id": "dal_023",
+        "title": "Assistant General Attorney / General Attorney (Environmental)",
+        "company": "BNSF Railway",
+        "location": "Fort Worth, TX",
+        "description": (
+            "Environmental law practice for Class I railroad. Reviewing and "
+            "negotiating environmental provisions, proactively identifying risk, "
+            "researching environmental matters, and handling environmental "
+            "litigation. Transportation/regulated industry."
+        ),
+        "url": "https://www.legal.io/jobs/5503002/Full-time/Asst-General-Attorney-General-Attorney-Environmental/Fort-Worth/Texas",
+        "salary_min": None, "salary_max": None,
+        "date_posted": "2026-03-10", "source": "Legal.io / BNSF Careers",
+    },
+    {
+        # SOURCE: Ladders
+        "id": "dal_024",
+        "title": "General Attorney (Claims Litigation)",
+        "company": "BNSF Railway",
+        "location": "Fort Worth, TX",
+        "description": (
+            "Claims litigation attorney for Class I railroad. Managing litigation "
+            "docket, personal injury claims, property damage, regulatory matters. "
+            "Transportation industry, trial experience valued."
+        ),
+        "url": "https://www.theladders.com/job/general-attorney-claims-litigation-bnsfrailwaycompany-fort-worth-tx_81898919",
+        "salary_min": None, "salary_max": None,
+        "date_posted": "2026-03-18", "source": "Ladders / BNSF Careers",
     },
 ]
 

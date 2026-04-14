@@ -293,7 +293,22 @@ SEARCH_QUERIES = [
 # ---------------------------------------------------------------------------
 # Location Preferences
 # ---------------------------------------------------------------------------
-PREFERRED_LOCATIONS = ["Dallas", "DFW", "Fort Worth", "Plano", "Frisco", "Irving"]
+# Full Dallas-Fort Worth Metroplex — all get the preferred location bonus
+PREFERRED_LOCATIONS = [
+    # Dallas core
+    "Dallas", "DFW", "Dallas-Fort Worth", "Dallas/Fort Worth", "DFW Metroplex",
+    # North Dallas / Collin County
+    "Plano", "Frisco", "McKinney", "Allen", "Richardson", "Addison",
+    "The Colony", "Lewisville", "Flower Mound",
+    # Mid-Cities
+    "Irving", "Las Colinas", "Grapevine", "Coppell", "Southlake",
+    "Colleyville", "Bedford", "Euless", "Hurst",
+    # Fort Worth / Tarrant County
+    "Fort Worth", "Arlington", "Mansfield", "Grand Prairie",
+    "North Richland Hills", "Keller", "Westlake",
+    # Denton County
+    "Denton",
+]
 ACCEPTABLE_LOCATIONS = ["Remote", "Hybrid", "Anywhere", "United States"]
 
 # ---------------------------------------------------------------------------

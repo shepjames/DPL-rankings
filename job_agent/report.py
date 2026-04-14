@@ -81,9 +81,15 @@ def _job_card(job: dict, rank: int) -> str:
     breakdown = job.get("score_breakdown", {})
     location = job.get("location", "Not specified")
 
-    # Location badge color
+    # Location badge color — full DFW metroplex
     loc_lower = location.lower()
-    if "dallas" in loc_lower or "dfw" in loc_lower or "fort worth" in loc_lower:
+    dfw_cities = [
+        "dallas", "dfw", "fort worth", "arlington", "plano", "frisco",
+        "irving", "mckinney", "allen", "richardson", "addison", "grapevine",
+        "coppell", "southlake", "las colinas", "grand prairie", "mansfield",
+        "denton", "lewisville", "flower mound", "westlake", "keller",
+    ]
+    if any(city in loc_lower for city in dfw_cities):
         loc_color = "#27ae60"
         loc_label = f"📍 {location}"
     elif "remote" in loc_lower:
@@ -165,9 +171,15 @@ def generate_report(jobs: list[dict], total_searched: int = 0) -> tuple[str, str
         subject = f"Daily Legal AI Job Report – {now.strftime('%m/%d')} – {n_jobs} match{'es' if n_jobs != 1 else ''}"
 
     # Stats
+    dfw_metroplex_cities = [
+        "dallas", "dfw", "fort worth", "arlington", "plano", "frisco",
+        "irving", "mckinney", "allen", "richardson", "addison", "grapevine",
+        "coppell", "southlake", "las colinas", "grand prairie", "mansfield",
+        "denton", "lewisville", "flower mound", "westlake", "keller",
+    ]
     dallas_count = sum(
         1 for j in display_jobs
-        if any(loc.lower() in j.get("location", "").lower() for loc in ["dallas", "dfw", "fort worth", "plano", "frisco", "irving"])
+        if any(city in j.get("location", "").lower() for city in dfw_metroplex_cities)
     )
     remote_count = sum(1 for j in display_jobs if "remote" in j.get("location", "").lower())
     avg_score = int(sum(j.get("score", 0) for j in display_jobs) / max(n_jobs, 1))
