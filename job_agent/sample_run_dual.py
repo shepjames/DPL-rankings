@@ -529,6 +529,22 @@ DALLAS_JOBS = [
         "salary_min": None, "salary_max": None,
         "date_posted": "2026-03-18", "source": "Ladders / BNSF Careers",
     },
+    {
+        # SOURCE: GoInhouse — NEW April 13, 2026
+        "id": "dal_025",
+        "title": "General Counsel",
+        "company": "Tandy Leather Factory",
+        "location": "Fort Worth, TX (Benbrook)",
+        "description": (
+            "GC role at iconic Fort Worth-headquartered company (since 1919). "
+            "New HQ in Benbrook, TX. Top-level legal advisor responsibilities "
+            "across corporate, commercial, regulatory, and governance matters. "
+            "Public company (NASDAQ: TLF). Step-up to GC level."
+        ),
+        "url": "https://www.goinhouse.com/jobs/522691997-general-counsel-at-tandy-leather-factory",
+        "salary_min": 200000, "salary_max": 225000,
+        "date_posted": "2026-04-13", "source": "GoInhouse",
+    },
 ]
 
 
